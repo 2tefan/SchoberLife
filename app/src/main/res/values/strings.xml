@@ -1,0 +1,44 @@
+<resources>
+	<string name="app_name">Schober0021</string>
+
+	<string name="aufgabe">Aufgabe</string>
+	<string name="choise1default">Choise1</string>
+	<string name="choise2default">Choise2</string>
+	<string name="choise3default">Choise3</string>
+	<string name="choise4default">Choise4</string>
+
+	<string-array name="choise1">
+		<item>Be honest!</item>
+		<item>Convince the teacher to write the test next lesson.</item>                                <!--  B: -250 N:0     E: -200  G:-100  -->
+		<item>Start to cry and say that you are not this person. Your only hope is that he believes you.</item>        <!--  B: -750 N:0     E: -500  G:0     -->
+		<item>You are pretending to calculate something.</item>                                                                    <!--  B: +250 N:-600  E: -300  G:0     -->
+	</string-array>
+
+	<string-array name="choise2">
+		<item>Go to the toilet and try to solve it.</item>
+		<item>Stay quiet and try to solve the task.</item>                                                            <!--  B: 0    N:-50   E: -50   G:0     -->
+		<item>Stay quiet and get an entry in the class register.</item>                                                <!--  B: 0    N:-100  E: -150  G:0     -->
+		<item>Say nothing and risk that the teacher will call your parents and you will get a bad grade.</item>        <!--  B: 0    N:-100  E: -550  G:0     -->
+	</string-array>
+
+	<string-array name="choise3">
+		<item>Try to copy the homework from someone else.</item>
+		<item>Stay quiet and try to copy the answers from someone else.</item>
+		<item>Try to argue with him.</item>
+		<item>Put the calculator away and try to answer the question.</item>
+	</string-array>
+
+	<string-array name="choise4">
+		<item>Tell the teacher a lie.</item>
+		<item>Leave a blank letter.</item>
+		<item>Commit suicide.</item>
+		<item>Say you are really sorry and put the calculator in your backpack.</item>
+	</string-array>
+
+	<string-array name="aufgabe">
+		<item>You haven\'t done your homework. What are you going to do?</item>
+		<item>Mr. K entered the room, and suddenly the class was quiet. \"Please close your books. Today we\'re writing a test.\" You haven\'t learned anything. What will you do now?</item>
+		<item>Mr. J is really angry because a student is yelling all the time. But he thinks that you are this person. How do you want to defend yourself?</item>
+		<item>You are playing Tetris on your calculator, suddenly you notice that the teacher is standing in front of you. He starts yelling about something, but you do not care. After he finished his rant, he asks you a question, but you do not know the answer. What will you do now?</item>
+	</string-array>
+</resources>
