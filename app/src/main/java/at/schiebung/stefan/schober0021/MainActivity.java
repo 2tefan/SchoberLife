@@ -1,9 +1,8 @@
 package at.schiebung.stefan.schober0021;
 
 import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -61,6 +60,7 @@ public class MainActivity extends AppCompatActivity
 	{
 		money();
 		grade();
+		reputation();
 
 		frage();
 	}
@@ -141,6 +141,43 @@ public class MainActivity extends AppCompatActivity
 		}
 
 		imgGrade.setImageResource(grade);
+	}
+
+	public void reputation()
+	{
+		ImageView imgGrade = findViewById(R.id.img_reputation);
+		int       reputation    = R.drawable.reputation_0;
+
+		if (Vars.reputation >= 850)
+		{
+			reputation = R.drawable.reputation_6;
+		}
+		else if(Vars.reputation >= 700)
+		{
+			reputation = R.drawable.reputation_5;
+		}
+		else if(Vars.reputation >= 550)
+		{
+			reputation = R.drawable.reputation_4;
+		}
+		else if(Vars.reputation >= 400)
+		{
+			reputation = R.drawable.reputation_3;
+		}
+		else if(Vars.reputation >= 250)
+		{
+			reputation = R.drawable.reputation_2;
+		}
+		else if(Vars.reputation >= 100)
+		{
+			reputation = R.drawable.reputation_1;
+		}
+		else if(Vars.reputation >= 0)
+		{
+			reputation = R.drawable.reputation_0;
+		}
+
+		imgGrade.setImageResource(reputation);
 	}
 
 	public void frage()
