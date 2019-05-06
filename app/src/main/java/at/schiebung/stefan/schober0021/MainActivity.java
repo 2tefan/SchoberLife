@@ -53,10 +53,10 @@ public class MainActivity extends AppCompatActivity
 		Vars.parents += Vars.change[Vars.frage][choise][2];
 		Vars.money += Vars.change[Vars.frage][choise][3];
 
-		bilder();
+		stats();
 	}
 
-	public void bilder()
+	public void stats()
 	{
 		money();
 		grade();
