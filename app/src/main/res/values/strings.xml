@@ -6,7 +6,7 @@
     <string name="choise2default">Choise2</string>
     <string name="choise3default">Choise3</string>
     <string name="choise4default">Choise4</string>
-    <string name="acknowledgeDefault">Ack</string>
+    <string name="acknowledgeDefault">Acknowledge&#8230;</string>
 
     <string-array name="aufgabe">
         <item>You haven\'t done your homework. What are you going to do?</item>
