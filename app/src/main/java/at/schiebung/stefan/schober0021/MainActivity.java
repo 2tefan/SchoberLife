@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         auswerten(3);
     }
 
+    public void btnAcknowledge
+
     public void auswerten(int choise) {
         Vars.reputation += Vars.change[Vars.frage][choise][0];
         Vars.grade += Vars.change[Vars.frage][choise][1];
@@ -184,11 +186,13 @@ public class MainActivity extends AppCompatActivity {
         TextView btnChoise2 = findViewById(R.id.btnChoise2);
         TextView btnChoise3 = findViewById(R.id.btnChoise3);
         TextView btnChoise4 = findViewById(R.id.btnChoise4);
+        TextView btnAcknowledge = findViewById(R.id.btnAcknowledge);
 
         btnChoise1.setVisibility(View.GONE);
         btnChoise2.setVisibility(View.GONE);
         btnChoise3.setVisibility(View.GONE);
         btnChoise4.setVisibility(View.GONE);
+        btnAcknowledge.setVisibility(View.VISIBLE);
 
         String[] answer = {};
         switch (choise) {
@@ -207,5 +211,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         String output = answer[Vars.frage];
+        ausgabe.setText(output);
     }
 }
