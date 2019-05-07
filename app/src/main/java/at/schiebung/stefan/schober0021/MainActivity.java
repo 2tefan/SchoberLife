@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity
         int      frage;
         do
         {
-            frage = rng.nextInt(aufgabe.length-1);
+            frage = rng.nextInt(aufgabe.length);
         } while (Vars.frage == frage);
         Vars.frage = frage;
 
@@ -265,19 +265,36 @@ public class MainActivity extends AppCompatActivity
                 answer = getResources().getStringArray(R.array.answer4);
                 break;
         }
-        String output;
+        String  output;
+        boolean defaultAnswer = false;
+
+
         try
         {
-            output = answer[Vars.frage];
+            if (answer[Vars.frage].equals(""))
+            {
+                defaultAnswer = true;
+            }
         }
         catch (ArrayIndexOutOfBoundsException e)
+        {
+            defaultAnswer = true;
+        }
+
+        if (defaultAnswer)
         {
             Random   rng            = new Random();
             int      wert;
             String[] defaultAnswers = getResources().getStringArray(R.array.defaultAnswers);
-            wert = rng.nextInt(defaultAnswers.length - 1);
+            wert = rng.nextInt(defaultAnswers.length);
             output = defaultAnswers[wert];
         }
+        else
+        {
+            output = answer[Vars.frage];
+        }
+
+
         ausgabe.setText(output);
 
         switchButtons();
