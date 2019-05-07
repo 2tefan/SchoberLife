@@ -55,37 +55,17 @@
 
     <string-array name="answer1">
         <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
     </string-array>
 
     <string-array name="answer2">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
         <item></item>
     </string-array>
 
     <string-array name="answer3">
         <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
     </string-array>
 
     <string-array name="answer4">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
         <item></item>
     </string-array>
 
