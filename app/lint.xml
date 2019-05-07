@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="IconLocation">
+        <ignore path="src/main/res/drawable/reputation_5.png" />
+        <ignore path="src/main/res/drawable/reputation_5.png" />
+        <ignore path="src/main/res/drawable/reputation_5.png" />
+        <ignore path="src/main/res/drawable/reputation_5.png" />
+        <ignore path="src/main/res/drawable/reputation_5.png" />
+        <ignore path="src/main/res/drawable/reputation_5.png" />
+    </issue>
+</lint>
