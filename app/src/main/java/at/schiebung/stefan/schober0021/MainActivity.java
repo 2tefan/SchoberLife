@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity
 {
-    at.schiebung.stefan.schober0021.Methoden methoden = new at.schiebung.stefan.schober0021.Methoden();
+    private final at.schiebung.stefan.schober0021.Methoden methoden = new at.schiebung.stefan.schober0021.Methoden();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity
         frage();
     }
 
-    public void auswerten(int choise)
+    private void auswerten(int choise)
     {
         Vars.reputation += Vars.change[Vars.frage][choise][0];
         Vars.grade += Vars.change[Vars.frage][choise][1];
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity
         stats();
     }
 
-    public void stats()
+    private void stats()
     {
         money();
         grade();
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity
         parents();
     }
 
-    public void money()
+    private void money()
     {
         ImageView imgMoney = findViewById(R.id.img_money);
         int       money    = R.drawable.money_0;
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity
         imgMoney.setImageResource(money);
     }
 
-    public void grade()
+    private void grade()
     {
         ImageView imgGrade = findViewById(R.id.img_grade);
         int       grade    = R.drawable.grade_5;
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity
         imgGrade.setImageResource(grade);
     }
 
-    public void reputation()
+    private void reputation()
     {
         ImageView imgGrade   = findViewById(R.id.img_reputation);
         int       reputation = R.drawable.reputation_0;
@@ -186,7 +186,7 @@ public class MainActivity extends AppCompatActivity
         imgGrade.setImageResource(reputation);
     }
 
-    public void parents()
+    private void parents()
     {
         ImageView imgMoney = findViewById(R.id.img_parents);
         int       parents  = R.drawable.parents_0;
@@ -212,7 +212,7 @@ public class MainActivity extends AppCompatActivity
         imgMoney.setImageResource(parents);
     }
 
-    public void frage()
+    private void frage()
     {
         Resources res = getResources();
         Random    rng = new Random();
@@ -245,7 +245,7 @@ public class MainActivity extends AppCompatActivity
         btnChoise4.setText(choise4[Vars.frage]);
     }
 
-    public void antwort(int choise)
+    private void antwort(int choise)
     {
         TextView ausgabe = findViewById(R.id.txtAufgabe);
 
@@ -300,7 +300,7 @@ public class MainActivity extends AppCompatActivity
         switchButtons();
     }
 
-    public void switchButtons()
+    private void switchButtons()
     {
         TextView btnChoise1     = findViewById(R.id.btnChoise1);
         TextView btnChoise2     = findViewById(R.id.btnChoise2);

@@ -2,7 +2,8 @@ package at.schiebung.stefan.schober0021;
 
 import android.content.Context;
 
-public class Saves
+@SuppressWarnings("unused")
+class Saves
 {
 	public static void loadSaves(Context context)
 	{

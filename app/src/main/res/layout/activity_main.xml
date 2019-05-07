@@ -2,7 +2,6 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mainCL"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
@@ -130,7 +129,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Space
-        android:id="@+id/spaceLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -144,7 +142,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Space
-        android:id="@+id/spaceRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -216,7 +213,8 @@
             app:layout_constraintEnd_toStartOf="@+id/spaceLeftCL"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/grade_1" />
+            app:srcCompat="@drawable/grade_1"
+            android:contentDescription="TODO" />
 
         <ImageView
             android:id="@+id/img_reputation"
@@ -232,7 +230,8 @@
             app:layout_constraintEnd_toStartOf="@+id/spaceMiddleCL"
             app:layout_constraintStart_toEndOf="@+id/spaceLeftCL"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/reputation_6" />
+            app:srcCompat="@drawable/reputation_6"
+            android:contentDescription="TODO" />
 
         <ImageView
             android:id="@+id/img_parents"
@@ -249,7 +248,8 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/spaceMiddleCL"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/parents_3" />
+            app:srcCompat="@drawable/parents_3"
+            android:contentDescription="TODO" />
 
         <ImageView
             android:id="@+id/img_money"
@@ -263,7 +263,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/spaceRightCL"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/money_9" />
+            app:srcCompat="@drawable/money_9"
+            android:contentDescription="TODO" />
 
     </android.support.constraint.ConstraintLayout>
 

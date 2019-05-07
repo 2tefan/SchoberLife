@@ -1,6 +1,6 @@
 package at.schiebung.stefan.schober0021;
 
-public class Methoden
+class Methoden
 {
 	public void werte(int anzahl)
 	{

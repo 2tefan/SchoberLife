@@ -18,6 +18,7 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Base64;
@@ -34,13 +35,15 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
 
-public class SecurePreferences
+@SuppressWarnings("unused")
+class SecurePreferences
 {
 
-    public static class SecurePreferencesException extends RuntimeException
+    @SuppressWarnings("unused")
+    static class SecurePreferencesException extends RuntimeException
     {
 
-        public SecurePreferencesException(Throwable e)
+        SecurePreferencesException(Throwable e)
         {
             super(e);
         }
@@ -70,6 +73,7 @@ public class SecurePreferences
      *                       the plaintext value of the value which can be used to decipher the value.
      * @throws SecurePreferencesException
      */
+    @SuppressLint("GetInstance")
     public SecurePreferences(Context context, String preferenceName, String secureKey, boolean encryptKeys) throws
                                                                                                             SecurePreferencesException
     {
@@ -95,7 +99,7 @@ public class SecurePreferences
         }
     }
 
-    protected void initCiphers(String secureKey) throws
+    private void initCiphers(String secureKey) throws
                                                  UnsupportedEncodingException,
                                                  NoSuchAlgorithmException,
                                                  InvalidKeyException,
@@ -109,7 +113,7 @@ public class SecurePreferences
         keyWriter.init(Cipher.ENCRYPT_MODE, secretKey);
     }
 
-    protected IvParameterSpec getIv()
+    private IvParameterSpec getIv()
     {
         byte[] iv = new byte[writer.getBlockSize()];
         System.arraycopy("fldsjfodasjifudslfjdsaofshaufihadsf".getBytes(),
@@ -120,7 +124,7 @@ public class SecurePreferences
         return new IvParameterSpec(iv);
     }
 
-    protected SecretKeySpec getSecretKey(String key) throws
+    private SecretKeySpec getSecretKey(String key) throws
                                                      UnsupportedEncodingException,
                                                      NoSuchAlgorithmException
     {
@@ -128,7 +132,7 @@ public class SecurePreferences
         return new SecretKeySpec(keyBytes, TRANSFORMATION);
     }
 
-    protected byte[] createKeyBytes(String key) throws
+    private byte[] createKeyBytes(String key) throws
                                                 UnsupportedEncodingException,
                                                 NoSuchAlgorithmException
     {
@@ -193,7 +197,7 @@ public class SecurePreferences
         preferences.edit().putString(key, secureValueEncoded).apply();
     }
 
-    protected String encrypt(String value, Cipher writer) throws SecurePreferencesException
+    private String encrypt(String value, Cipher writer) throws SecurePreferencesException
     {
         byte[] secureValue;
         try
@@ -207,7 +211,7 @@ public class SecurePreferences
         return Base64.encodeToString(secureValue, Base64.NO_WRAP);
     }
 
-    protected String decrypt(String securedEncodedValue)
+    private String decrypt(String securedEncodedValue)
     {
         byte[] securedValue = Base64.decode(securedEncodedValue, Base64.NO_WRAP);
         byte[] value        = convert(reader, securedValue);
