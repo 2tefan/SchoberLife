@@ -1,97 +1,18 @@
-<!--suppress CheckTagEmptyBody -->
 <resources>
     <string name="app_name">Schober0021</string>
 
-    <string name="aufgabe">Aufgabe</string>
-    <string name="choise1default">Choise1</string>
-    <string name="choise2default">Choise2</string>
-    <string name="choise3default">Choise3</string>
-    <string name="choise4default">Choise4</string>
+    <string name="question">Question</string>
+    <string name="choice1default">Choice1</string>
+    <string name="choice2default">Choice2</string>
+    <string name="choice3default">Choice3</string>
+    <string name="choice4default">Choice4</string>
     <string name="acknowledgeDefault">Acknowledge&#8230;</string>
 
-    <string-array name="aufgabe">
-        <item>You haven\'t done your homework. What are you going to do?</item>
-        <item>Your teacher entered the room, and suddenly the class was quiet. \"Please close your books. Today we\'re writing a test.\" You haven\'t learned anything. What will you do now?</item>
-        <item>Your teacher is really angry because a student is talking all the time. But he thinks that you are this person. How do you want to defend yourself?</item>
-        <item>You are playing Tetris on your calculator, suddenly you notice that the teacher is standing in front of you. He starts yelling about something, but you do not care. After he finished his rant, he asks you a question, but you do not know the answer. What will you do now?</item>
-        <item>Your teacher is ill, so you have a free lesson. What will you do?</item>
-        <item>Someone in your class needs help. What are you going to do?</item>
-    </string-array>
+    <!--Icons Desc-->
 
-    <string-array name="choise1">
-        <item>Be honest!</item>
-        <item>Convince the teacher to write the test next lesson.</item>                                <!--  B: -250 N:0     E: -200  G:-100  -->
-        <item>Start to cry and say that you are not this person. Your only hope is that he believes you.</item>        <!--  B: -750 N:0     E: -500  G:0     -->
-        <item>You are pretending to calculate something.</item>                                                                    <!--  B: +250 N:-600  E: -300  G:0     -->
-        <item>Just get bored.</item>
-        <item>Ignore him/her.</item>
-    </string-array>
+    <string name="reputationDesc">A Icon that displays how much Reputation is left.</string>
+    <string name="gradeDesc">A Icon that displays on what grade you are.</string>
+    <string name="parentsDesc">A Icon that displays how much your Parents like you.</string>
+    <string name="moneyDesc">A Icon that displays how much Money is left.</string>
 
-    <string-array name="choise2">
-        <item>Go to the toilet and try to solve it.</item>
-        <item>Stay quiet and try to solve the task.</item>                                                            <!--  B: 0    N:-50   E: -50   G:0     -->
-        <item>Stay quiet and get an entry in the class register.</item>                                                <!--  B: 0    N:-100  E: -150  G:0     -->
-        <item>Say nothing and risk that the teacher will call your parents and you will get a bad grade.</item>        <!--  B: 0    N:-100  E: -550  G:0     -->
-        <item>Talk to someone.</item>
-        <item>Try to help him/her.</item>
-    </string-array>
-
-    <string-array name="choise3">
-        <item>Try to copy the homework from someone else.</item>
-        <item>Stay quiet and try to copy the answers from someone else.</item>
-        <item>Try to argue with him.</item>
-        <item>Put the calculator away and try to answer the question.</item>
-        <item>Just stare into your smartphone.</item>
-        <item>Ask for money before you help him/her.</item>
-    </string-array>
-
-    <string-array name="choise4">
-        <item>Tell the teacher a lie.</item>
-        <item>Leave a blank letter.</item>
-        <item>Commit suicide.</item>
-        <item>Say you are really sorry and put the calculator in your backpack.</item>
-        <item>Do your homework.</item>
-        <item>Ask someone else if he/she can help him/her.</item>
-    </string-array>
-
-    <string-array name="answer1">
-        <item>You were honest, but it impacted your grade.</item>
-        <item>The teacher pushed the test date a few days back and your whole class appreciated your action.</item>
-        <item>Did you really think, that this would work?</item>
-        <item></item>
-        <item></item>
-        <item></item>
-    </string-array>
-
-    <string-array name="answer2">
-        <item>You did it, but your classmates don't like that you did that.</item>
-        <item>You failed.</item>
-        <item>You got a entry in the class register.</item>
-        <item></item>
-        <item></item>
-        <item></item>
-    </string-array>
-
-    <string-array name="answer3">
-        <item>The teacher noticed and you got a bad grade.</item>
-        <item>You tried to copy it from your neighbour, but he did fail, so you did too.</item>
-        <item>It didn't work.</item>
-        <item></item>
-        <item></item>
-        <item></item>
-    </string-array>
-
-    <string-array name="answer4">
-        <item>You said, that your dog had eaten your homework, and your teacher didn't trust you.</item>
-        <item>You got what you would expect.</item>
-        <item>You successfully committed suicide.</item>
-        <item></item>
-        <item></item>
-        <item></item>
-    </string-array>
-
-    <string-array name="defaultAnswers">
-        <item>You did what you wanted to do.</item>
-        <item>You succeed.</item>
-    </string-array>
 </resources>

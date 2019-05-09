@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/txtAufgabe"
+        android:id="@+id/txtQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -19,7 +19,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="@string/aufgabe"
+        android:text="@string/question"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnChoise1"
+        android:id="@+id/btnChoice1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -36,8 +36,8 @@
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
         android:background="@drawable/btn_bg"
-        android:onClick="choise1"
-        android:text="@string/choise1default"
+        android:onClick="choice1"
+        android:text="@string/choice1default"
         android:textAllCaps="false"
         app:layout_constraintEnd_toStartOf="@+id/spaceMiddle"
         app:layout_constraintHorizontal_bias="0.0"
@@ -45,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/statsCL" />
 
     <Button
-        android:id="@+id/btnChoise2"
+        android:id="@+id/btnChoice2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -54,8 +54,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/btn_bg"
-        android:onClick="choise2"
-        android:text="@string/choise2default"
+        android:onClick="choice2"
+        android:text="@string/choice2default"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -63,7 +63,7 @@
         app:layout_constraintTop_toBottomOf="@+id/statsCL" />
 
     <Button
-        android:id="@+id/btnChoise3"
+        android:id="@+id/btnChoice3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -72,15 +72,15 @@
         android:layout_marginRight="4dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/btn_bg"
-        android:onClick="choise3"
-        android:text="@string/choise3default"
+        android:onClick="choice3"
+        android:text="@string/choice3default"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/spaceMiddle"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnChoise4"
+        android:id="@+id/btnChoice4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -89,8 +89,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/btn_bg"
-        android:onClick="choise4"
-        android:text="@string/choise4default"
+        android:onClick="choice4"
+        android:text="@string/choice4default"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -200,7 +200,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/img_grade"
+            android:id="@+id/imgGrade"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_marginStart="8dp"
@@ -209,15 +209,15 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
+            android:contentDescription="@string/gradeDesc"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/spaceLeftCL"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/grade_1"
-            android:contentDescription="TODO" />
+            app:srcCompat="@drawable/grade_1" />
 
         <ImageView
-            android:id="@+id/img_reputation"
+            android:id="@+id/imgReputation"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_marginStart="8dp"
@@ -226,15 +226,15 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
+            android:contentDescription="@string/reputationDesc"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/spaceMiddleCL"
             app:layout_constraintStart_toEndOf="@+id/spaceLeftCL"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/reputation_6"
-            android:contentDescription="TODO" />
+            app:srcCompat="@drawable/reputation_6" />
 
         <ImageView
-            android:id="@+id/img_parents"
+            android:id="@+id/imgParents"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_marginStart="8dp"
@@ -243,28 +243,28 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
+            android:contentDescription="@string/parentsDesc"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/spaceRightCL"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/spaceMiddleCL"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/parents_3"
-            android:contentDescription="TODO" />
+            app:srcCompat="@drawable/parents_3" />
 
         <ImageView
-            android:id="@+id/img_money"
+            android:id="@+id/imgMoney"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
+            android:contentDescription="@string/moneyDesc"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/spaceRightCL"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/money_9"
-            android:contentDescription="TODO" />
+            app:srcCompat="@drawable/money_9" />
 
     </android.support.constraint.ConstraintLayout>
 
