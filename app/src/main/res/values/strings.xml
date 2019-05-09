@@ -12,7 +12,7 @@
     <string-array name="aufgabe">
         <item>You haven\'t done your homework. What are you going to do?</item>
         <item>Your teacher entered the room, and suddenly the class was quiet. \"Please close your books. Today we\'re writing a test.\" You haven\'t learned anything. What will you do now?</item>
-        <item>Your teacher is really angry because a student is yelling all the time. But he thinks that you are this person. How do you want to defend yourself?</item>
+        <item>Your teacher is really angry because a student is talking all the time. But he thinks that you are this person. How do you want to defend yourself?</item>
         <item>You are playing Tetris on your calculator, suddenly you notice that the teacher is standing in front of you. He starts yelling about something, but you do not care. After he finished his rant, he asks you a question, but you do not know the answer. What will you do now?</item>
         <item>Your teacher is ill, so you have a free lesson. What will you do?</item>
         <item>Someone in your class needs help. What are you going to do?</item>
@@ -55,35 +55,35 @@
     </string-array>
 
     <string-array name="answer1">
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>You were honest, but it impacted your grade.</item>
+        <item>The teacher pushed the test date a few days back and your whole class appreciated your action.</item>
+        <item>Did you really think, that this would work?</item>
         <item></item>
         <item></item>
         <item></item>
     </string-array>
 
     <string-array name="answer2">
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>You did it, but your classmates don't like that you did that.</item>
+        <item>You failed.</item>
+        <item>You got a entry in the class register.</item>
         <item></item>
         <item></item>
         <item></item>
     </string-array>
 
     <string-array name="answer3">
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>The teacher noticed and you got a bad grade.</item>
+        <item>You tried to copy it from your neighbour, but he did fail, so you did too.</item>
+        <item>It didn't work.</item>
         <item></item>
         <item></item>
         <item></item>
     </string-array>
 
     <string-array name="answer4">
-        <item></item>
-        <item></item>
+        <item>You said, that your dog had eaten your homework, and your teacher didn't trust you.</item>
+        <item>You got what you would expect.</item>
         <item>You successfully committed suicide.</item>
         <item></item>
         <item></item>
