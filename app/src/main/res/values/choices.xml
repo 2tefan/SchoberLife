@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="choise1">
+    <string-array name="choice1">
         <item>Be honest!</item>
         <item>Convince the teacher to write the test next lesson.</item>
         <item>Start to cry and say that you are not this person. Your only hope is that he believes you.</item>
-        <item>Tell him that you calculated something important and can't answer his question</item>
+        <item>Tell him that you calculated something important and can\'t answer his question</item>
         <item>Just get bored.</item>
         <item>Ignore her.</item>
     </string-array>
 
-    <string-array name="choise2">
+    <string-array name="choice2">
         <item>Go to the toilet and try to solve it.</item>
         <item>Stay quiet and try to solve the task.</item>
         <item>Stay quiet and get an entry in the class register.</item>
@@ -18,7 +18,7 @@
         <item>Try to help her.</item>
     </string-array>
 
-    <string-array name="choise3">
+    <string-array name="choice3">
         <item>Try to copy the homework from someone else.</item>
         <item>Stay quiet and try to copy the answers from someone else.</item>
         <item>Try to argue with him.</item>
@@ -27,7 +27,7 @@
         <item>Ask for money before you help her.</item>
     </string-array>
 
-    <string-array name="choise4">
+    <string-array name="choice4">
         <item>Tell the teacher a lie.</item>
         <item>Leave a blank letter.</item>
         <item>Commit suicide.</item>

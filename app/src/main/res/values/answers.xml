@@ -10,25 +10,25 @@
     </string-array>
 
     <string-array name="answer2">
-        <item>You did it, but your classmates don't like that you did that.</item>
+        <item>You did it, but your classmates don\'t like that you did that.</item>
         <item>You failed.</item>
         <item>You got a entry in the class register.</item>
         <item>He gets even more angry.</item>
-        <item>You talk to your friends and classmates and that's it.</item>
+        <item>You talk to your friends and classmates and that\'s it.</item>
         <item>You helped her and you got to know each other a little better.</item>
     </string-array>
 
     <string-array name="answer3">
         <item>The teacher noticed and you got a bad grade.</item>
         <item>You tried to copy it from your neighbour, but he did fail, so you did too.</item>
-        <item>It didn't work.</item>
+        <item>It didn\'t work.</item>
         <item>Your neighbor even helps you to answer his question and it works.</item>
         <item>You have a nice time, but you completely ignored all of your friends.</item>
         <item>She refused.</item>
     </string-array>
 
     <string-array name="answer4">
-        <item>You said, that your dog had eaten your homework, and your teacher didn't trust you.</item>
+        <item>You said, that your dog had eaten your homework, and your teacher didn\'t trust you.</item>
         <item>You got what you would expect.</item>
         <item>You successfully committed suicide.</item>
         <item>He calms down, but still gives you a bad grade.</item>

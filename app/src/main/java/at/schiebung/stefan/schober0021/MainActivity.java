@@ -11,7 +11,6 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity
 {
-    private final at.schiebung.stefan.schober0021.Methoden methoden = new at.schiebung.stefan.schober0021.Methoden();
     private final at.schiebung.stefan.schober0021.Questions questions = new Questions();
 
     @Override
@@ -20,9 +19,8 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Resources res     = getResources();
-        String[]  aufgabe = res.getStringArray(R.array.question);
-        methoden.werte(aufgabe.length);
+        Resources res      = getResources();
+        String[]  question = res.getStringArray(R.array.question);
 
         question();
     }
@@ -50,7 +48,7 @@ public class MainActivity extends AppCompatActivity
     /**
      * Shows the acknowledge view.
      *
-     * @param V
+     * @param V For android:click
      */
     public void btnAcknowledge(View V)
     {
@@ -61,16 +59,16 @@ public class MainActivity extends AppCompatActivity
     /**
      * Calculates all four values.
      *
-     * @param choise The choice the player took.
+     * @param choice The choice the player took.
      */
-    private void evaluate(int choise)
+    private void evaluate(int choice)
     {
-        Vars.reputation += questions.questionArray[Vars.lastQuestion][choise][0];
-        Vars.grade += questions.questionArray[Vars.lastQuestion][choise][1];
-        Vars.parents += questions.questionArray[Vars.lastQuestion][choise][2];
-        Vars.money += questions.questionArray[Vars.lastQuestion][choise][3];
+        Vars.reputation += questions.questionArray[Vars.lastQuestion][choice][0];
+        Vars.grade += questions.questionArray[Vars.lastQuestion][choice][1];
+        Vars.parents += questions.questionArray[Vars.lastQuestion][choice][2];
+        Vars.money += questions.questionArray[Vars.lastQuestion][choice][3];
 
-        answer(choise);
+        answer(choice);
         stats();
     }
 
@@ -91,7 +89,7 @@ public class MainActivity extends AppCompatActivity
     private void money()
     {
         ImageView imgMoney = findViewById(R.id.imgMoney);
-        int       money    = R.drawable.money_0;
+        int       money    = R.drawable.fail;
 
         if (Vars.money >= 900)
         {
@@ -143,7 +141,7 @@ public class MainActivity extends AppCompatActivity
     private void grade()
     {
         ImageView imgGrade = findViewById(R.id.imgGrade);
-        int       grade    = R.drawable.grade_5;
+        int       grade    = R.drawable.fail;
 
         if (Vars.grade >= 800)
         {
@@ -175,7 +173,7 @@ public class MainActivity extends AppCompatActivity
     private void reputation()
     {
         ImageView imgGrade   = findViewById(R.id.imgReputation);
-        int       reputation = R.drawable.reputation_0;
+        int       reputation = R.drawable.fail;
 
         if (Vars.reputation >= 850)
         {
@@ -215,7 +213,7 @@ public class MainActivity extends AppCompatActivity
     private void parents()
     {
         ImageView imgMoney = findViewById(R.id.imgParents);
-        int       parents  = R.drawable.parents_0;
+        int       parents  = R.drawable.fail;
 
 
         if (Vars.parents >= 750)
@@ -258,19 +256,19 @@ public class MainActivity extends AppCompatActivity
         TextView txtQuestion = findViewById(R.id.txtQuestion);
         txtQuestion.setText(question[Vars.lastQuestion]);
 
-        String[] choice1    = res.getStringArray(R.array.choise1);
+        String[] choice1    = res.getStringArray(R.array.choice1);
         TextView btnChoice1 = findViewById(R.id.btnChoice1);
         btnChoice1.setText(choice1[Vars.lastQuestion]);
 
-        String[] choice2    = res.getStringArray(R.array.choise2);
+        String[] choice2    = res.getStringArray(R.array.choice2);
         TextView btnChoice2 = findViewById(R.id.btnChoice2);
         btnChoice2.setText(choice2[Vars.lastQuestion]);
 
-        String[] choice3    = res.getStringArray(R.array.choise3);
+        String[] choice3    = res.getStringArray(R.array.choice3);
         TextView btnChoice3 = findViewById(R.id.btnChoice3);
         btnChoice3.setText(choice3[Vars.lastQuestion]);
 
-        String[] choice4    = res.getStringArray(R.array.choise4);
+        String[] choice4    = res.getStringArray(R.array.choice4);
         TextView btnChoice4 = findViewById(R.id.btnChoice4);
         btnChoice4.setText(choice4[Vars.lastQuestion]);
     }
@@ -282,7 +280,7 @@ public class MainActivity extends AppCompatActivity
      */
     private void answer(int choice)
     {
-        TextView ausgabe = findViewById(R.id.txtQuestion);
+        TextView answers = findViewById(R.id.txtQuestion);
 
         String[] answer = {};
         switch (choice)
@@ -319,10 +317,10 @@ public class MainActivity extends AppCompatActivity
         if (defaultAnswer)
         {
             Random   rng            = new Random();
-            int      wert;
+            int      answerIndex;
             String[] defaultAnswers = getResources().getStringArray(R.array.defaultAnswers);
-            wert = rng.nextInt(defaultAnswers.length);
-            output = defaultAnswers[wert];
+            answerIndex = rng.nextInt(defaultAnswers.length);
+            output = defaultAnswers[answerIndex];
         }
         else
         {
@@ -330,36 +328,36 @@ public class MainActivity extends AppCompatActivity
         }
 
 
-        ausgabe.setText(output);
+        answers.setText(output);
 
         switchButtons();
     }
 
     /**
-     * Makes the choise-buttons invisible/visible and the ack-button visible/invisible.
+     * Makes the choice-buttons invisible/visible and the ack-button visible/invisible.
      */
     private void switchButtons()
     {
-        TextView btnChoise1     = findViewById(R.id.btnChoice1);
-        TextView btnChoise2     = findViewById(R.id.btnChoice2);
-        TextView btnChoise3     = findViewById(R.id.btnChoice3);
-        TextView btnChoise4     = findViewById(R.id.btnChoice4);
+        TextView btnChoice1     = findViewById(R.id.btnChoice1);
+        TextView btnChoice2     = findViewById(R.id.btnChoice2);
+        TextView btnChoice3     = findViewById(R.id.btnChoice3);
+        TextView btnChoice4     = findViewById(R.id.btnChoice4);
         TextView btnAcknowledge = findViewById(R.id.btnAcknowledge);
 
         if (btnAcknowledge.getVisibility() == View.VISIBLE)
         {
-            btnChoise1.setVisibility(View.VISIBLE);
-            btnChoise2.setVisibility(View.VISIBLE);
-            btnChoise3.setVisibility(View.VISIBLE);
-            btnChoise4.setVisibility(View.VISIBLE);
+            btnChoice1.setVisibility(View.VISIBLE);
+            btnChoice2.setVisibility(View.VISIBLE);
+            btnChoice3.setVisibility(View.VISIBLE);
+            btnChoice4.setVisibility(View.VISIBLE);
             btnAcknowledge.setVisibility(View.GONE);
         }
         else
         {
-            btnChoise1.setVisibility(View.GONE);
-            btnChoise2.setVisibility(View.GONE);
-            btnChoise3.setVisibility(View.GONE);
-            btnChoise4.setVisibility(View.GONE);
+            btnChoice1.setVisibility(View.GONE);
+            btnChoice2.setVisibility(View.GONE);
+            btnChoice3.setVisibility(View.GONE);
+            btnChoice4.setVisibility(View.GONE);
             btnAcknowledge.setVisibility(View.VISIBLE);
         }
     }
