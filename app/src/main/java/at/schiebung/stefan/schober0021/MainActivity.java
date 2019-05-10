@@ -18,10 +18,6 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Resources res      = getResources();
-        String[]  question = res.getStringArray(R.array.question);
-
         question();
     }
 

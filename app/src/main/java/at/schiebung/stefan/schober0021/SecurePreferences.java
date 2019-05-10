@@ -35,7 +35,7 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
 
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "SpellCheckingInspection"})
 class SecurePreferences
 {
 
@@ -74,7 +74,7 @@ class SecurePreferences
      * @throws SecurePreferencesException Some exception.
      */
     @SuppressLint("GetInstance")
-    public SecurePreferences(Context context, String preferenceName, String secureKey, boolean encryptKeys) throws
+    SecurePreferences(Context context, String preferenceName, String secureKey, boolean encryptKeys) throws
                                                                                                             SecurePreferencesException
     {
         try
