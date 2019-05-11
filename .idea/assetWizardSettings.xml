@@ -63,7 +63,9 @@
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
                                       <entry key="backgroundColor" value="01579b" />
-                                      <entry key="foregroundImage" value="C:\Users\Stefan\Desktop\icon.png" />
+                                      <entry key="foregroundImage" value="C:\Users\Stefan\OneDrive\Schober\21\Icon\icon.png" />
+                                      <entry key="legacyIconShape" value="CIRCLE" />
+                                      <entry key="webIconShape" value="CIRCLE" />
                                     </map>
                                   </option>
                                 </PersistentState>
