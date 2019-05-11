@@ -1,6 +1,6 @@
 # Schober0021
 
-Das soll ein kleines Spiel werden in dem man 4 Werte hat und diese nicht unter einen bestimmten Grad fallen dürfen.
-Beliebtheit - Geld  - Ansehen der Eltern  - Ruf
+This is a little game and you have four values that can go up and down and if they hit a value that is too low you lose :(.
+This values are called: Reputation - Money - Parents - Grade
 
-Es gibt immer vier Antworten zwischen den man sich entscheiden kann und je nachdem für welche man sich entscheidet hat dies auswirkungen auf die vier Werte.
+Then there will always be a question or situation and you have four ways to react to that. Every decision will have an effect on the four values.
