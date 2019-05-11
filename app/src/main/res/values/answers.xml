@@ -7,6 +7,7 @@
         <item>You try to convince him and it works.</item>
         <item>You did nothing useful.</item>
         <item>You successfully ignored her.</item>
+        <item>You successfully ignored them.</item>
     </string-array>
 
     <string-array name="answer2">
@@ -16,6 +17,7 @@
         <item>He gets even more angry.</item>
         <item>You talk to your friends and classmates and that\'s it.</item>
         <item>You helped her and you got to know each other a little better.</item>
+        <item>You talked to them and got to know each other better.</item>
     </string-array>
 
     <string-array name="answer3">
@@ -25,6 +27,7 @@
         <item>Your neighbor even helps you to answer his question and it works.</item>
         <item>You have a nice time, but you completely ignored all of your friends.</item>
         <item>She refused.</item>
+        <item>They did what you asked them to do.</item>
     </string-array>
 
     <string-array name="answer4">
@@ -34,6 +37,7 @@
         <item>He calms down, but still gives you a bad grade.</item>
         <item>You have done your homework, congrats.</item>
         <item>You found somebody.</item>
+        <item>Now you got new neighbours.</item>
     </string-array>
 
     <string-array name="defaultAnswers">

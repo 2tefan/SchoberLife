@@ -7,6 +7,7 @@
         <item>Tell him that you calculated something important and can\'t answer his question</item>
         <item>Just get bored.</item>
         <item>Ignore her.</item>
+        <item>Ignore them.</item>
     </string-array>
 
     <string-array name="choice2">
@@ -16,6 +17,7 @@
         <item>Say nothing and risk that the teacher will give you a bad grade.</item>
         <item>Talk to someone.</item>
         <item>Try to help her.</item>
+        <item>Talk with them.</item>
     </string-array>
 
     <string-array name="choice3">
@@ -25,6 +27,7 @@
         <item>Put the calculator away and try to answer the question.</item>
         <item>Just stare into your smartphone.</item>
         <item>Ask for money before you help her.</item>
+        <item>Ask them if they could stop that.</item>
     </string-array>
 
     <string-array name="choice4">
@@ -34,5 +37,6 @@
         <item>Say you are really sorry and put the calculator in your backpack.</item>
         <item>Do your homework.</item>
         <item>Ask someone else if he could help her.</item>
+        <item>Get to another seat.</item>
     </string-array>
 </resources>

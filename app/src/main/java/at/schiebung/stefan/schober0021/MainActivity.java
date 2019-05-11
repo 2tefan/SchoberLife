@@ -18,7 +18,18 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Saves.loadSaves(this);
+
+        stats();
         question();
+    }
+
+    @Override
+    public void onPause()
+    {
+        super.onPause();
+
     }
 
     public void choice1(View V)
@@ -77,6 +88,7 @@ public class MainActivity extends AppCompatActivity
         grade();
         reputation();
         parents();
+        Saves.saveSaves(this);
     }
 
     /**
