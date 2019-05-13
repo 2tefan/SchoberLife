@@ -13,6 +13,7 @@
         <item>Ask the teacher if he could explain it again for you.</item>
         <item>Take some money and leave it there.</item>
         <item>Just let it burn.</item>
+        <item>You pick yes.</item>
     </string-array>
 
     <string-array name="choice2">
@@ -28,6 +29,7 @@
         <item>Ask your neighbor if he could help you.</item>
         <item>Leave the wallet there.</item>
         <item>Try to extinguish it.</item>
+        <item>You pick no.</item>
     </string-array>
 
     <string-array name="choice3">
@@ -43,6 +45,7 @@
         <item>Do nothing.</item>
         <item>Take all the money and leave it.</item>
         <item>Tell the teacher.</item>
+        <item>You try to get the answer from your neighbor.</item>
     </string-array>
 
     <string-array name="choice4">
@@ -58,5 +61,6 @@
         <item>Try harder to understand it.</item>
         <item>Give the wallet to your teacher.</item>
         <item>Press the flue and do nothing.</item>
+        <item>You leave the exercise unfinished.</item>
     </string-array>
 </resources>

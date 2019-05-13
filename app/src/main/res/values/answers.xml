@@ -13,6 +13,7 @@
         <item>The teacher explained it again for you and now you understand it better.</item>
         <item>You took some money, but at least for now, nobody noticed.</item>
         <item>You let it burn and the teacher notices. Now the whole class is on fire and you have a big problem.</item>
+        <item>You were wrong.</item>
     </string-array>
 
     <string-array name="answer2">
@@ -28,6 +29,7 @@
         <item>You understood him better than the teacher could ever explain.</item>
         <item>You left the wallet there.</item>
         <item>You failed horribly and the fire got even bigger. Now the teacher notices and the whole class is on fire and you have a big problem.</item>
+        <item>You were right.</item>
     </string-array>
 
     <string-array name="answer3">
@@ -43,6 +45,7 @@
         <item>You did nothing.</item>
         <item>You got a lot of money, but a classmate noticed and now you are in big trouble.</item>
         <item>He easily extinguish it.</item>
+        <item>You neighbor took yes, so did you, but it was wrong.</item>
     </string-array>
 
     <string-array name="answer4">
@@ -58,6 +61,7 @@
         <item>You tried but you failed.</item>
         <item>You gave it to the teacher, but you never received finder money.</item>
         <item>The fire alarm goes off and the teacher extinguish the fire. But now all students are out of the building.</item>
+        <item>You successfully left the exercise unfinished.</item>
     </string-array>
 
     <string-array name="defaultAnswers">
