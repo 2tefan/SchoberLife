@@ -8,6 +8,10 @@
         <item>Just get bored.</item>
         <item>Ignore her.</item>
         <item>Ignore them.</item>
+        <item>Write it by yourself.</item>
+        <item>Ask your classmates some questions about the test and let them ask you some questions too.</item>
+        <item>Ask the teacher if he could explain it again for you.</item>
+        <item>Take some money and leave it there.</item>
     </string-array>
 
     <string-array name="choice2">
@@ -18,6 +22,10 @@
         <item>Talk to someone.</item>
         <item>Try to help her.</item>
         <item>Talk with them.</item>
+        <item>Ask somebody if he could write it for you.</item>
+        <item>Try to learn and repeat everything that you need to know for your test.</item>
+        <item>Ask your neighbor if he could help you.</item>
+        <item>Leave the wallet there.</item>
     </string-array>
 
     <string-array name="choice3">
@@ -28,6 +36,10 @@
         <item>Just stare into your smartphone.</item>
         <item>Ask for money before you help her.</item>
         <item>Ask them if they could stop that.</item>
+        <item>Get a ghostwriter to write it for you.</item>
+        <item>Try to calm down.</item>
+        <item>Do nothing.</item>
+        <item>Take all the money and leave it.</item>
     </string-array>
 
     <string-array name="choice4">
@@ -38,5 +50,9 @@
         <item>Do your homework.</item>
         <item>Ask someone else if he could help her.</item>
         <item>Get to another seat.</item>
+        <item>Just don\'t write it.</item>
+        <item>Tell the teacher that you don\'t fell so good and need to go home.</item>
+        <item>Try harder to understand it.</item>
+        <item>Give the wallet to your teacher.</item>
     </string-array>
 </resources>

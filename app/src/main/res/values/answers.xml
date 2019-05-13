@@ -8,6 +8,10 @@
         <item>You did nothing useful.</item>
         <item>You successfully ignored her.</item>
         <item>You successfully ignored them.</item>
+        <item>You wrote the essay.</item>
+        <item>You get even more stressed, but at least you learned a little bit.</item>
+        <item>The teacher explained it again for you and now you understand it better.</item>
+        <item>You took some money, but at least for now, nobody noticed.</item>
     </string-array>
 
     <string-array name="answer2">
@@ -18,6 +22,10 @@
         <item>You talk to your friends and classmates and that\'s it.</item>
         <item>You helped her and you got to know each other a little better.</item>
         <item>You talked to them and got to know each other better.</item>
+        <item>Nobody wanted to write it for you, so you haven\'t done it.</item>
+        <item>You were so stressed after you tried to learn and repeat everything, that you got so confused that you failed the test.</item>
+        <item>You understood him better than the teacher could ever explain.</item>
+        <item>You left the wallet there.</item>
     </string-array>
 
     <string-array name="answer3">
@@ -28,6 +36,10 @@
         <item>You have a nice time, but you completely ignored all of your friends.</item>
         <item>She refused.</item>
         <item>They did what you asked them to do.</item>
+        <item>You hired a ghostwriter, but it was expensive.</item>
+        <item>You calmed down, therefore it was easier for you to concentrate and you got a better grade.</item>
+        <item>You did nothing.</item>
+        <item>You got a lot of money, but a classmate noticed and now you are in big trouble.</item>
     </string-array>
 
     <string-array name="answer4">
@@ -38,6 +50,10 @@
         <item>You have done your homework, congrats.</item>
         <item>You found somebody.</item>
         <item>Now you got new neighbours.</item>
+        <item>You successfully did nothing.</item>
+        <item>You went home, but when you needed to write the test again, you failed.</item>
+        <item>You tried but you failed.</item>
+        <item>You gave it to the teacher, but you never received finder money.</item>
     </string-array>
 
     <string-array name="defaultAnswers">

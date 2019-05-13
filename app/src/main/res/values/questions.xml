@@ -8,5 +8,9 @@
         <item>Your teacher is ill, so you have a free lesson. What will you do?</item>
         <item>Someone in your class needs help. What are you going to do?</item>
         <item>Your neighbours are trying to talk all the time with you.</item>
+        <item>You have to write an essay about something. How are you going to accomplish that?</item>
+        <item>You have a free lesson before a major test. You are very stressed. What are you going to do?</item>
+        <item>The teacher has explained something, but you didn\'t understand it.</item>
+        <item>You found a wallet at your desk.</item>
     </string-array>
 </resources>
