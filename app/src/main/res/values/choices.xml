@@ -12,6 +12,7 @@
         <item>Ask your classmates some questions about the test and let them ask you some questions too.</item>
         <item>Ask the teacher if he could explain it again for you.</item>
         <item>Take some money and leave it there.</item>
+        <item>Just let it burn.</item>
     </string-array>
 
     <string-array name="choice2">
@@ -26,6 +27,7 @@
         <item>Try to learn and repeat everything that you need to know for your test.</item>
         <item>Ask your neighbor if he could help you.</item>
         <item>Leave the wallet there.</item>
+        <item>Try to extinguish it.</item>
     </string-array>
 
     <string-array name="choice3">
@@ -40,6 +42,7 @@
         <item>Try to calm down.</item>
         <item>Do nothing.</item>
         <item>Take all the money and leave it.</item>
+        <item>Tell the teacher.</item>
     </string-array>
 
     <string-array name="choice4">
@@ -54,5 +57,6 @@
         <item>Tell the teacher that you don\'t fell so good and need to go home.</item>
         <item>Try harder to understand it.</item>
         <item>Give the wallet to your teacher.</item>
+        <item>Press the flue and do nothing.</item>
     </string-array>
 </resources>

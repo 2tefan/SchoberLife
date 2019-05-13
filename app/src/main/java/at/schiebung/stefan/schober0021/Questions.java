@@ -14,6 +14,7 @@ class Questions {
     private final int[][] question9 = {{20, 100, 0, 0}, {0, -100, 0, 0}, {0, 250, 0, 0}, {0, -100, -50, 0}};
     private final int[][] question10 = {{0, 100, 0, 0}, {0, 120, 0, 0}, {0, -150, 0, 0}, {0, -100, 0, 0}};
     private final int[][] question11 = {{0, 0, 0, 100}, {0, 0, 0, 0}, {-500, 0, -500, 0}, {100, 0, 0, 0}};
+    private final int[][] question12 = {{50, 0, -250, 250}, {0, 0, -250, 250}, {0, 0, -20, 0}, {250, -20, -20, 0}};
 
-    final int[][][] questionArray = {question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11};
+    final int[][][] questionArray = {question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11, question12};
 }
