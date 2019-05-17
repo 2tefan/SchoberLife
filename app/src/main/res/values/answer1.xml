@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="answer1">
+        <item>You were honest, but it impacted your grade.</item>
+        <item>The teacher pushed the test date a few days back and your whole class appreciated your action.</item>
+        <item>Did you really think, that this would work?</item>
+        <item>You try to convince him and it works.</item>
+        <item>You did nothing useful.</item>
+        <item>You successfully ignored her.</item>
+        <item>You successfully ignored them.</item>
+        <item>You wrote the essay.</item>
+        <item>You get even more stressed, but at least you learned a little bit.</item>
+        <item>The teacher explained it again for you and now you understand it better.</item>
+        <item>You took some money, but at least for now, nobody noticed.</item>
+        <item>You let it burn and the teacher notices. Now the whole class is on fire and you have a big problem.</item>
+        <item>You were wrong.</item>
+    </string-array>
+</resources>

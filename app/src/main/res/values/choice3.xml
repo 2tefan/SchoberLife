@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="choice3">
+        <item>Try to copy the homework from someone else.</item>
+        <item>Stay quiet and try to copy the answers from someone else.</item>
+        <item>Try to argue with him.</item>
+        <item>Put the calculator away and try to answer the question.</item>
+        <item>Just stare into your smartphone.</item>
+        <item>Ask for money before you help her.</item>
+        <item>Ask them if they could stop that.</item>
+        <item>Get a ghostwriter to write it for you.</item>
+        <item>Try to calm down.</item>
+        <item>Do nothing.</item>
+        <item>Take all the money and leave it.</item>
+        <item>Tell the teacher.</item>
+        <item>You try to get the answer from your neighbor.</item>
+    </string-array>
+</resources>

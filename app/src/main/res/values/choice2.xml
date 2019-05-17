@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="choice2">
+        <item>Go to the toilet and try to solve it.</item>
+        <item>Stay quiet and try to solve the task.</item>
+        <item>Stay quiet and get an entry in the class register.</item>
+        <item>Say nothing and risk that the teacher will give you a bad grade.</item>
+        <item>Talk to someone.</item>
+        <item>Try to help her.</item>
+        <item>Talk with them.</item>
+        <item>Ask somebody if he could write it for you.</item>
+        <item>Try to learn and repeat everything that you need to know for your test.</item>
+        <item>Ask your neighbor if he could help you.</item>
+        <item>Leave the wallet there.</item>
+        <item>Try to extinguish it.</item>
+        <item>You pick no.</item>
+    </string-array>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="choice1">
+        <item>Be honest!</item>
+        <item>Convince the teacher to write the test next lesson.</item>
+        <item>Start to cry and say that you are not this person. Your only hope is that he believes you.</item>
+        <item>Tell him that you calculated something important and can\'t answer his question</item>
+        <item>Just get bored.</item>
+        <item>Ignore her.</item>
+        <item>Ignore them.</item>
+        <item>Write it by yourself.</item>
+        <item>Ask your classmates some questions about the test and let them ask you some questions too.</item>
+        <item>Ask the teacher if he could explain it again for you.</item>
+        <item>Take some money and leave it there.</item>
+        <item>Just let it burn.</item>
+        <item>You pick yes.</item>
+    </string-array>
+</resources>

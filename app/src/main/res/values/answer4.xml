@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="answer4">
+        <item>You said, that your dog had eaten your homework, and your teacher didn\'t trust you.</item>
+        <item>You got what you would expect.</item>
+        <item>You successfully committed suicide.</item>
+        <item>He calms down, but still gives you a bad grade.</item>
+        <item>You have done your homework, congrats.</item>
+        <item>You found somebody.</item>
+        <item>Now you got new neighbours.</item>
+        <item>You successfully did nothing.</item>
+        <item>You went home, but when you needed to write the test again, you failed.</item>
+        <item>You tried but you failed.</item>
+        <item>You gave it to the teacher, but you never received finder money.</item>
+        <item>The fire alarm goes off and the teacher extinguish the fire. But now all students are out of the building.</item>
+        <item>You successfully left the exercise unfinished.</item>
+    </string-array>
+</resources>

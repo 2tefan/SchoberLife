@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="answer2">
+        <item>You did it, but your classmates don\'t like that you did that.</item>
+        <item>You failed.</item>
+        <item>You got a entry in the class register.</item>
+        <item>He gets even more angry.</item>
+        <item>You talk to your friends and classmates and that\'s it.</item>
+        <item>You helped her and you got to know each other a little better.</item>
+        <item>You talked to them and got to know each other better.</item>
+        <item>Nobody wanted to write it for you, so you haven\'t done it.</item>
+        <item>You were so stressed after you tried to learn and repeat everything, that you got so confused that you failed the test.</item>
+        <item>You understood him better than the teacher could ever explain.</item>
+        <item>You left the wallet there.</item>
+        <item>You failed horribly and the fire got even bigger. Now the teacher notices and the whole class is on fire and you have a big problem.</item>
+        <item>You were right.</item>
+    </string-array>
+</resources>

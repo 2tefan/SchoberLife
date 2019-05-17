@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="choice4">
+        <item>Tell the teacher a lie.</item>
+        <item>Leave a blank letter.</item>
+        <item>Commit suicide.</item>
+        <item>Say you are really sorry and put the calculator in your backpack.</item>
+        <item>Do your homework.</item>
+        <item>Ask someone else if he could help her.</item>
+        <item>Get to another seat.</item>
+        <item>Just don\'t write it.</item>
+        <item>Tell the teacher that you don\'t fell so good and need to go home.</item>
+        <item>Try harder to understand it.</item>
+        <item>Give the wallet to your teacher.</item>
+        <item>Press the flue and do nothing.</item>
+        <item>You leave the exercise unfinished.</item>
+    </string-array>
+</resources>
