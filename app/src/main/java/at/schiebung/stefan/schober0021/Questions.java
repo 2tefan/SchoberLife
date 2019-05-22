@@ -19,6 +19,8 @@ class Questions
     private final int[][] question12 = {{50, 0, -250, 250}, {0, 0, -250, 250}, {0, 0, -20, 0}, {250, -20, -20, 0}};
     private final int[][] question13 = {{0, -50, 0, 0}, {0, 50, 0, 0}, {-25, -50, 0, 0}, {0, -70, 0, 0}};
     private final int[][] question14 = {{250, -250, -50, -20}, {-250, 100, 20, 0}, {50, 50, 0, -10}, {-50, -200, -10, -20}};
+    private final int[][] question15 = {{100, 0, 0, 0}, {-100, 0, 0, 0}, {-150, 0, 0, 0}, {0, 0, 0, 0}};
 
-    final int[][][] questionArray = {question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11, question12, question13, question14};
+    final int[][][] questionArray = {question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11, question12, question13, question14,
+            question15};
 }
