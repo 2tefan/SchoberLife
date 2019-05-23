@@ -6,6 +6,9 @@
     <string name="grade">Grade</string>
     <string name="parents">Parents</string>
     <string name="money">Money</string>
+    <string name="loadedSave">loadedSave</string>
+
+    <string name="countPlayedTimes">countPlayedTimes</string>
 
     <string name="question">Question</string>
     <string name="choice1default">Choice1</string>
@@ -20,4 +23,11 @@
     <string name="gradeDesc">A Icon that displays on what grade you are.</string>
     <string name="parentsDesc">A Icon that displays how much your Parents like you.</string>
     <string name="moneyDesc">A Icon that displays how much Money is left.</string>
+
+    <string name="welcomeMessage">Welcome to Schober21!\nYou have 4 main values:\n\nYour Grade\nYour Reputation\nThe opinion of your Parents to you\nYour Money\n\nAnd depending on your actions, these values will change. Good Luck and have fun.</string>
+    <string name="welcomeIconDesc">Those icons show the 4 main values.</string>
+    <string name="welcomeGrade">Your Grade</string>
+    <string name="welcomeReputation">Your Reputation</string>
+    <string name="welcomeParents">The opinion of your Parents to you</string>
+    <string name="welcomeMoney">Your Money</string>
 </resources>

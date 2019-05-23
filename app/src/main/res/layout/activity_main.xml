@@ -2,258 +2,54 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainCL"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txtQuestion"
-        android:layout_width="wrap_content"
+    <include
+        android:id="@+id/includeStats"
+        layout="@layout/stats"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:gravity="center"
-        android:text="@string/question"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
 
-    <Button
-        android:id="@+id/btnChoice1"
+    <include
+        android:id="@+id/includeChoices"
+        layout="@layout/choices"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="4dp"
-        android:background="@drawable/btn_bg"
-        android:onClick="choice1"
-        android:text="@string/choice1default"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toStartOf="@+id/spaceMiddle"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/statsCL" />
-
-    <Button
-        android:id="@+id/btnChoice2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/btn_bg"
-        android:onClick="choice2"
-        android:text="@string/choice2default"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/spaceMiddle"
-        app:layout_constraintTop_toBottomOf="@+id/statsCL" />
-
-    <Button
-        android:id="@+id/btnChoice3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/btn_bg"
-        android:onClick="choice3"
-        android:text="@string/choice3default"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/spaceMiddle"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnChoice4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/btn_bg"
-        android:onClick="choice4"
-        android:text="@string/choice4default"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/spaceMiddle" />
-
-    <Button
-        android:id="@+id/btnAcknowledge"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/btn_bg"
-        android:onClick="btnAcknowledge"
-        android:text="@string/acknowledgeDefault"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Space
-        android:id="@+id/spaceMiddle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/includeStats"
+        tools:visibility="visible" />
 
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <include
+        android:id="@+id/includeWelcomeLayout"
+        layout="@layout/welcome_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/spaceMiddle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/spaceMiddle"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/statsCL"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Space
-            android:id="@+id/spaceMiddleCL"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Space
-            android:id="@+id/spaceLeftCL"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/spaceMiddleCL"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Space
-            android:id="@+id/spaceRightCL"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/spaceMiddleCL"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imgGrade"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:contentDescription="@string/gradeDesc"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/spaceLeftCL"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/grade_1" />
-
-        <ImageView
-            android:id="@+id/imgReputation"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:contentDescription="@string/reputationDesc"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/spaceMiddleCL"
-            app:layout_constraintStart_toEndOf="@+id/spaceLeftCL"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/reputation_6" />
-
-        <ImageView
-            android:id="@+id/imgParents"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:contentDescription="@string/parentsDesc"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/spaceRightCL"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/spaceMiddleCL"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/parents_3" />
-
-        <ImageView
-            android:id="@+id/imgMoney"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:contentDescription="@string/moneyDesc"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/spaceRightCL"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/money_9" />
-
-    </android.support.constraint.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/includeStats"
+        tools:visibility="invisible" />
 
 </android.support.constraint.ConstraintLayout>

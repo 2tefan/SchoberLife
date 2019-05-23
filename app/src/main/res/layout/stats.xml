@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/CLstats"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgGrade"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/gradeDesc"
+        app:layout_constraintEnd_toStartOf="@+id/spaceLeftStats"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/grade_1" />
+
+    <ImageView
+        android:id="@+id/imgReputation"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/reputationDesc"
+        app:layout_constraintEnd_toStartOf="@+id/spaceMiddleStats"
+        app:layout_constraintStart_toEndOf="@+id/imgGrade"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/reputation_6" />
+
+    <ImageView
+        android:id="@+id/imgMoney"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/moneyDesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgParents"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/money_9" />
+
+    <ImageView
+        android:id="@+id/imgParents"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/parentsDesc"
+        app:layout_constraintEnd_toStartOf="@+id/spaceRightStats"
+        app:layout_constraintStart_toEndOf="@+id/imgReputation"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/parents_3" />
+
+    <Space
+        android:id="@+id/spaceRightStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spaceMiddleStats"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Space
+        android:id="@+id/spaceMiddleStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Space
+        android:id="@+id/spaceLeftStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/spaceMiddleStats"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

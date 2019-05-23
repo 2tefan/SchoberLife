@@ -2,12 +2,15 @@ package at.schiebung.stefan.schober0021;
 
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Random;
+
+import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -19,17 +22,22 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if (BuildConfig.DEBUG)
+        {
+            Timber.plant(new Timber.DebugTree());
+        }
+
         Saves.loadSaves(this);
 
         stats();
         question();
+        welcomeMessage(!Vars.loadedSave);
     }
 
     @Override
     public void onPause()
     {
         super.onPause();
-
     }
 
     public void choice1(View V)
@@ -50,6 +58,17 @@ public class MainActivity extends AppCompatActivity
     public void choice4(View V)
     {
         evaluate(3);
+    }
+
+    /**
+     * fAB = floating Action Button
+     * To Make the welcome screen disappear and the choice screen appear.
+     *
+     * @param V For android:click
+     */
+    public void fAB(View V)
+    {
+        welcomeMessage(false);
     }
 
     /**
@@ -367,6 +386,23 @@ public class MainActivity extends AppCompatActivity
             btnChoice3.setVisibility(View.GONE);
             btnChoice4.setVisibility(View.GONE);
             btnAcknowledge.setVisibility(View.VISIBLE);
+        }
+    }
+
+    private void welcomeMessage(boolean welcomeMessage)
+    {
+        ConstraintLayout clWelcome = findViewById(R.id.includeWelcomeLayout);
+        ConstraintLayout clChoices = findViewById(R.id.includeChoices);
+
+        if (welcomeMessage)
+        {
+            clWelcome.setVisibility(View.VISIBLE);
+            clChoices.setVisibility(View.GONE);
+        }
+        else
+        {
+            clWelcome.setVisibility(View.GONE);
+            clChoices.setVisibility(View.VISIBLE);
         }
     }
 }

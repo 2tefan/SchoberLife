@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="answer3">
+        <item>The teacher noticed and you got a bad grade.</item>
+        <item>You tried to copy it from your neighbour, but he did fail, so you did too.</item>
+        <item>It didn\'t work.</item>
+        <item>Your neighbor even helps you to answer his question and it works.</item>
+        <item>You have a nice time, but you completely ignored all of your friends.</item>
+        <item>She refused.</item>
+        <item>They did what you asked them to do.</item>
+        <item>You hired a ghostwriter, but it was expensive.</item>
+        <item>You calmed down, therefore it was easier for you to concentrate and you got a better grade.</item>
+        <item>You did nothing.</item>
+        <item>You got a lot of money, but a classmate noticed and now you are in big trouble.</item>
+        <item>He easily extinguish it.</item>
+        <item>You neighbor took yes, so did you, but it was wrong.</item>
+        <item>Do something with them on Saturday and learn on Sunday.</item>
+        <item>They talked about a classmate and you listened on their conversation awkwardly.</item>
+    </string-array>
+</resources>
