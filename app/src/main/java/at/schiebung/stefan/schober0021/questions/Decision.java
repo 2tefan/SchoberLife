@@ -1,6 +1,6 @@
-package at.schiebung.stefan.schober0021;
+package at.schiebung.stefan.schober0021.questions;
 
-public class Question
+public class Decision
 {
     //Beliebtheit - Note - Eltern - Geld
     private int reputation = 0;

@@ -14,7 +14,7 @@ import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity
 {
-    private final AllAnswers allAnswers = new AllAnswers();
+    private final Questions questions = new Questions();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity
             Timber.plant(new Timber.DebugTree());
         }
 
-        allAnswers.init(getResources().getStringArray(R.array.question).length);
+        questions.init(getResources().getStringArray(R.array.question).length);
         Saves.loadSaves(this);
 
         stats();
@@ -90,10 +90,10 @@ public class MainActivity extends AppCompatActivity
      */
     private void evaluate(int choice)
     {
-        Vars.reputation += allAnswers.allQuestionArray.questionArray[Vars.lastQuestion].getQuestionArray()[choice].getReputation();
-        Vars.grade += allAnswers.allQuestionArray.questionArray[Vars.lastQuestion].getQuestionArray()[choice].getGrade();
-        Vars.parents += allAnswers.allQuestionArray.questionArray[Vars.lastQuestion].getQuestionArray()[choice].getParents();
-        Vars.money += allAnswers.allQuestionArray.questionArray[Vars.lastQuestion].getQuestionArray()[choice].getMoney();
+        Vars.reputation += questions.questionDecisionArray.questionDecision[Vars.lastQuestion].getDecisionArray()[choice].getReputation();
+        Vars.grade += questions.questionDecisionArray.questionDecision[Vars.lastQuestion].getDecisionArray()[choice].getGrade();
+        Vars.parents += questions.questionDecisionArray.questionDecision[Vars.lastQuestion].getDecisionArray()[choice].getParents();
+        Vars.money += questions.questionDecisionArray.questionDecision[Vars.lastQuestion].getDecisionArray()[choice].getMoney();
 
         answer(choice);
         stats();
@@ -390,6 +390,11 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    /**
+     * Makes the welcome message visible and gone, depending on the boolean.
+     *
+     * @param welcomeMessage true = message will show.
+     */
     private void welcomeMessage(boolean welcomeMessage)
     {
         ConstraintLayout clWelcome = findViewById(R.id.includeWelcomeLayout);
