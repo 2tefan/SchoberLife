@@ -10,6 +10,7 @@ class Saves
 {
     static void loadSaves(Context context)
     {
+        Vars.resetToDefaults();
         SharedPreferences preferences = Armadillo.create(context, context.getString(R.string.prefName)).encryptionFingerprint(context).enableKitKatSupport(true).build();
 
         Vars.reputation = preferences.getInt(context.getString(R.string.saveReputation), Vars.reputation);

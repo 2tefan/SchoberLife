@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="standardGOM">
+        <item>You failed. Now you can try again or give up.</item>
+    </string-array>
+    <string-array name="GOMReputation">
+        <item>Everybody in the whole world hates you and you decide to kill yourself.</item>
+    </string-array>
+    <string-array name="GOMGrade">
+        <item>You got kicked out of school and now this game has no reason to go on.</item>
+    </string-array>
+    <string-array name="GOMParents">
+        <item>You disappointed your parents so much that they hated you and kicked out of your home. Now you live on the street. Congrats.</item>
+    </string-array>
+    <string-array name="GOMMoney">
+        <item>You have no Money to buy food. So you slowly starve to death.</item>
+    </string-array>
+</resources>

@@ -2,7 +2,7 @@ package at.schiebung.stefan.schober0021.questions;
 
 public class QuestionDecision
 {
-    private Decision[] decisionArray = new Decision[4];
+    private final Decision[] decisionArray = new Decision[4];
 
     void init()
     {
@@ -31,9 +31,5 @@ public class QuestionDecision
     public Decision[] getDecisionArray()
     {
         return decisionArray;
-    }
-    public void setDecisionArray(Decision[] decisionArray)
-    {
-        this.decisionArray = decisionArray;
     }
 }

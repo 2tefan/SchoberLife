@@ -13,11 +13,4 @@ public class QuestionDecisionArray
             questionDecision[i].init();
         }
     }
-    public void addToQuestionArray(QuestionDecision array)
-    {
-        QuestionDecision[] temp = new QuestionDecision[questionDecision.length + 1];
-        temp[temp.length - 1] = array;
-
-        System.arraycopy(temp, 0, questionDecision, 0, questionDecision.length);
-    }
 }

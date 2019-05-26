@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity
         questions.init(getResources().getStringArray(R.array.question).length);
         Saves.loadSaves(this);
 
-        stats();
-        question();
+        showGameOverScreen(false);
         welcomeMessage(!Vars.loadedSave);
+        doNextStep();
     }
 
     @Override
@@ -62,14 +62,21 @@ public class MainActivity extends AppCompatActivity
     }
 
     /**
-     * fAB = floating Action Button
+     * fab = floating Action Button
      * To Make the welcome screen disappear and the choice screen appear.
      *
      * @param V For android:click
      */
-    public void fAB(View V)
+    public void closeWelcomeScreen(View V)
     {
         welcomeMessage(false);
+    }
+
+    public void resetGame(View V)
+    {
+        Vars.resetToDefaults();
+        showGameOverScreen(false);
+        doNextStep();
     }
 
     /**
@@ -80,11 +87,25 @@ public class MainActivity extends AppCompatActivity
     public void btnAcknowledge(View V)
     {
         switchButtons();
-        question();
+        doNextStep();
+    }
+
+    public void doNextStep()
+    {
+        refreshIcons();
+
+        if (!gameOver())
+        {
+            showNewQuestion();
+        }
+        else
+        {
+            showGameOverScreen(true);
+        }
     }
 
     /**
-     * Calculates all four values.
+     * Calculates all values.
      *
      * @param choice The choice the player took.
      */
@@ -95,14 +116,14 @@ public class MainActivity extends AppCompatActivity
         Vars.parents += questions.questionDecisionArray.questionDecision[Vars.lastQuestion].getDecisionArray()[choice].getParents();
         Vars.money += questions.questionDecisionArray.questionDecision[Vars.lastQuestion].getDecisionArray()[choice].getMoney();
 
-        answer(choice);
-        stats();
+        showAnswer(choice);
+        refreshIcons();
     }
 
     /**
      * Sets all icons.
      */
-    private void stats()
+    private void refreshIcons()
     {
         money();
         grade();
@@ -265,9 +286,9 @@ public class MainActivity extends AppCompatActivity
     }
 
     /**
-     * Displays a new question and the choices correlating to it.
+     * Displays a new Question and the choices correlating to it.
      */
-    private void question()
+    private void showNewQuestion()
     {
         Resources res = getResources();
         Random    rng = new Random();
@@ -302,11 +323,64 @@ public class MainActivity extends AppCompatActivity
     }
 
     /**
+     * Returns if the game is over.
+     *
+     * @return If the game is over.
+     */
+    private boolean gameOver()
+    {
+        return Vars.reputation < 0 || Vars.grade < 0 || Vars.parents < 0 || Vars.money < 0;
+    }
+
+    /**
+     * Shows the game over screen.
+     */
+    private void showGameOverScreen(boolean gom)
+    {
+        ConstraintLayout clGOM     = findViewById(R.id.includeGameOverScreen);
+        ConstraintLayout clChoices = findViewById(R.id.includeChoices);
+        switchConstraintLayouts(gom, clGOM, clChoices);
+        generateGameOverMessage();
+    }
+
+    /**
+     * Picks a game over message depending on how you lost the game.
+     */
+    private void generateGameOverMessage()
+    {
+        Resources res             = getResources();
+        Random    rng             = new Random();
+        String[]  gameOverMessage = res.getStringArray(R.array.standardGOM);
+
+        if (Vars.reputation < 0)
+        {
+            gameOverMessage = res.getStringArray(R.array.GOMReputation);
+        }
+        if (Vars.grade < 0)
+        {
+            gameOverMessage = res.getStringArray(R.array.GOMGrade);
+        }
+        if (Vars.parents < 0)
+        {
+            gameOverMessage = res.getStringArray(R.array.GOMParents);
+        }
+        if (Vars.money < 0)
+        {
+            gameOverMessage = res.getStringArray(R.array.GOMMoney);
+        }
+
+        int pickedGOM = rng.nextInt(gameOverMessage.length);
+
+        TextView txtGOM = findViewById(R.id.txtGameOverMessage);
+        txtGOM.setText(gameOverMessage[pickedGOM]);
+    }
+
+    /**
      * Gives a respond to the choice the user made.
      *
      * @param choice The choice, that was chosen by the user.
      */
-    private void answer(int choice)
+    private void showAnswer(int choice)
     {
         TextView answers = findViewById(R.id.txtQuestion);
 
@@ -400,15 +474,27 @@ public class MainActivity extends AppCompatActivity
         ConstraintLayout clWelcome = findViewById(R.id.includeWelcomeLayout);
         ConstraintLayout clChoices = findViewById(R.id.includeChoices);
 
-        if (welcomeMessage)
+        switchConstraintLayouts(welcomeMessage, clWelcome, clChoices);
+    }
+
+    /**
+     * Makes a ConstraintLayout visible/gone.
+     *
+     * @param showFirst Decides if the first ConstraintLayout will be shown or the second ConstraintLayout.
+     * @param firstCL   The first ConstraintLayout.
+     * @param secondCL  The second ConstraintLayout.
+     */
+    private void switchConstraintLayouts(boolean showFirst, ConstraintLayout firstCL, ConstraintLayout secondCL)
+    {
+        if (showFirst)
         {
-            clWelcome.setVisibility(View.VISIBLE);
-            clChoices.setVisibility(View.GONE);
+            firstCL.setVisibility(View.VISIBLE);
+            secondCL.setVisibility(View.GONE);
         }
         else
         {
-            clWelcome.setVisibility(View.GONE);
-            clChoices.setVisibility(View.VISIBLE);
+            firstCL.setVisibility(View.GONE);
+            secondCL.setVisibility(View.VISIBLE);
         }
     }
 }

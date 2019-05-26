@@ -23,6 +23,7 @@
     <string name="choice3default">Choice3</string>
     <string name="choice4default">Choice4</string>
     <string name="acknowledgeDefault">Acknowledge&#8230;</string>
+    <string name="gameOverMessage">Game Over Message</string>
 
     <!-- Icons Desc -->
 
@@ -30,6 +31,7 @@
     <string name="gradeDesc">A Icon that displays on what grade you are.</string>
     <string name="parentsDesc">A Icon that displays how much your Parents like you.</string>
     <string name="moneyDesc">A Icon that displays how much Money is left.</string>
+    <string name="imgFail">Shows a picture, that indicates that you failed.</string>
 
     <string name="welcomeMessage">Welcome to Schober21!\nYou have 4 main values:\n\nYour Grade\nYour Reputation\nThe opinion of your Parents to you\nYour Money\n\nAnd depending on your actions, these values will change. Good Luck and have fun.</string>
     <string name="welcomeIconDesc">Those icons show the 4 main values.</string>
