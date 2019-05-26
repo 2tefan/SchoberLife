@@ -1,15 +1,22 @@
 <resources>
     <string name="app_name">Schober0021</string>
 
+    <!-- Loading -->
     <string name="prefName">SchoberPrefs</string>
-    <string name="reputation">Reputation</string>
-    <string name="grade">Grade</string>
-    <string name="parents">Parents</string>
-    <string name="money">Money</string>
-    <string name="loadedSave">loadedSave</string>
+    <string name="saveReputation">saveReputation</string>
+    <string name="saveGrade">saveGrade</string>
+    <string name="saveParents">saveParents</string>
+    <string name="saveMoney">saveMoney</string>
+    <string name="saveLoadedSave">saveLoadedSave</string>
 
-    <string name="countPlayedTimes">countPlayedTimes</string>
+    <string name="saveCountPlayedTimes">saveCountPlayedTimes</string>
+    <string name="saveFailedReputation">saveFailedReputation</string>
+    <string name="saveFailedGrade">saveFailedGrade</string>
+    <string name="saveFailedParents">saveFailedParents</string>
+    <string name="saveFailedMoney">saveFailedMoney</string>
 
+
+    <!-- Default Values -->
     <string name="question">Question</string>
     <string name="choice1default">Choice1</string>
     <string name="choice2default">Choice2</string>
@@ -17,7 +24,7 @@
     <string name="choice4default">Choice4</string>
     <string name="acknowledgeDefault">Acknowledge&#8230;</string>
 
-    <!--Icons Desc-->
+    <!-- Icons Desc -->
 
     <string name="reputationDesc">A Icon that displays how much Reputation is left.</string>
     <string name="gradeDesc">A Icon that displays on what grade you are.</string>

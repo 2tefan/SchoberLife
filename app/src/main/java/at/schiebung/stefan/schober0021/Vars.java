@@ -11,4 +11,8 @@ class Vars
     static boolean loadedSave = false;
 
     static int countPlayedTimes = 0;
+    static int failedReputation = 0;
+    static int failedGrade      = 0;
+    static int failedParents    = 0;
+    static int failedMoney      = 0;
 }

@@ -12,13 +12,17 @@ class Saves
     {
         SharedPreferences preferences = Armadillo.create(context, context.getString(R.string.prefName)).encryptionFingerprint(context).enableKitKatSupport(true).build();
 
-        Vars.reputation = preferences.getInt(context.getString(R.string.reputation), Vars.reputation);
-        Vars.grade = preferences.getInt(context.getString(R.string.grade), Vars.grade);
-        Vars.parents = preferences.getInt(context.getString(R.string.parents), Vars.parents);
-        Vars.money = preferences.getInt(context.getString(R.string.money), Vars.money);
-        Vars.loadedSave = preferences.getBoolean(context.getString(R.string.loadedSave), Vars.loadedSave);
+        Vars.reputation = preferences.getInt(context.getString(R.string.saveReputation), Vars.reputation);
+        Vars.grade = preferences.getInt(context.getString(R.string.saveGrade), Vars.grade);
+        Vars.parents = preferences.getInt(context.getString(R.string.saveParents), Vars.parents);
+        Vars.money = preferences.getInt(context.getString(R.string.saveMoney), Vars.money);
+        Vars.loadedSave = preferences.getBoolean(context.getString(R.string.saveLoadedSave), Vars.loadedSave);
 
-        Vars.countPlayedTimes = preferences.getInt(context.getString(R.string.countPlayedTimes), Vars.countPlayedTimes);
+        Vars.countPlayedTimes = preferences.getInt(context.getString(R.string.saveCountPlayedTimes), Vars.countPlayedTimes);
+        Vars.failedReputation = preferences.getInt(context.getString(R.string.saveFailedReputation), Vars.failedReputation);
+        Vars.failedGrade = preferences.getInt(context.getString(R.string.saveFailedGrade), Vars.failedGrade);
+        Vars.failedParents = preferences.getInt(context.getString(R.string.saveFailedParents), Vars.failedParents);
+        Vars.failedMoney = preferences.getInt(context.getString(R.string.saveFailedMoney), Vars.failedMoney);
 
         Timber.i("Reputation: %s", Vars.reputation);
         Timber.i("Grade: %s", Vars.grade);
@@ -32,12 +36,12 @@ class Saves
     {
         SharedPreferences preferences = Armadillo.create(context, context.getString(R.string.prefName)).encryptionFingerprint(context).enableKitKatSupport(true).build();
 
-        preferences.edit().putInt(context.getString(R.string.reputation), Vars.reputation).apply();
-        preferences.edit().putInt(context.getString(R.string.grade), Vars.grade).apply();
-        preferences.edit().putInt(context.getString(R.string.parents), Vars.parents).apply();
-        preferences.edit().putInt(context.getString(R.string.money), Vars.money).apply();
-        preferences.edit().putBoolean(context.getString(R.string.loadedSave), true).apply();
+        preferences.edit().putInt(context.getString(R.string.saveReputation), Vars.reputation).apply();
+        preferences.edit().putInt(context.getString(R.string.saveGrade), Vars.grade).apply();
+        preferences.edit().putInt(context.getString(R.string.saveParents), Vars.parents).apply();
+        preferences.edit().putInt(context.getString(R.string.saveMoney), Vars.money).apply();
+        preferences.edit().putBoolean(context.getString(R.string.saveLoadedSave), true).apply();
 
-        preferences.edit().putInt(context.getString(R.string.countPlayedTimes), Vars.countPlayedTimes).apply();
+        preferences.edit().putInt(context.getString(R.string.saveCountPlayedTimes), Vars.countPlayedTimes).apply();
     }
 }
