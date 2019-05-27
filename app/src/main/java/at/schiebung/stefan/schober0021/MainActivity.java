@@ -90,7 +90,10 @@ public class MainActivity extends AppCompatActivity
         doNextStep();
     }
 
-    public void doNextStep()
+    /**
+     * Decides if the game show go on, or if a game over screen should be shown.
+     */
+    private void doNextStep()
     {
         refreshIcons();
 
@@ -368,6 +371,51 @@ public class MainActivity extends AppCompatActivity
         {
             gameOverMessage = res.getStringArray(R.array.GOMMoney);
         }
+        if (Vars.reputation < 0 && Vars.grade < 0)
+        {
+            gameOverMessage = res.getStringArray(R.array.GOMReputationAndGrade);
+        }
+        if (Vars.reputation < 0 && Vars.parents < 0)
+        {
+            gameOverMessage = res.getStringArray(R.array.GOMReputationAndParents);
+        }
+        if (Vars.reputation < 0 && Vars.money < 0)
+        {
+            gameOverMessage = res.getStringArray(R.array.GOMReputationAndMoney);
+        }
+        if (Vars.grade < 0 && Vars.parents < 0)
+        {
+            gameOverMessage = res.getStringArray(R.array.GOMGradeAndParents);
+        }
+        if (Vars.grade < 0 && Vars.money < 0)
+        {
+            gameOverMessage = res.getStringArray(R.array.GOMGradeAndMoney);
+        }
+        if (Vars.parents < 0 && Vars.money < 0)
+        {
+            gameOverMessage = res.getStringArray(R.array.GOMParentsAndMoney);
+        }
+        if (Vars.reputation < 0 && Vars.grade < 0 && Vars.parents < 0)
+        {
+            gameOverMessage = res.getStringArray(R.array.GOMReputationAndGradeAndParents);
+        }
+        if (Vars.reputation < 0 && Vars.grade < 0 && Vars.money < 0)
+        {
+            gameOverMessage = res.getStringArray(R.array.GOMReputationAndGradeAndMoney);
+        }
+        if (Vars.reputation < 0 && Vars.parents < 0 && Vars.money < 0)
+        {
+            gameOverMessage = res.getStringArray(R.array.GOMReputationAndParentsAndMoney);
+        }
+        if (Vars.grade < 0 && Vars.parents < 0 && Vars.money < 0)
+        {
+            gameOverMessage = res.getStringArray(R.array.GOMGradeAndParentsAndMoney);
+        }
+        if (Vars.reputation < 0 && Vars.grade < 0 && Vars.parents < 0 && Vars.money < 0)
+        {
+            gameOverMessage = res.getStringArray(R.array.GOMReputationAndGradeAndParentsAndMoney);
+        }
+
 
         int pickedGOM = rng.nextInt(gameOverMessage.length);
 

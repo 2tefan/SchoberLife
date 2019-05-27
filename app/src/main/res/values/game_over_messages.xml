@@ -15,4 +15,42 @@
     <string-array name="GOMMoney">
         <item>You have no Money to buy food. So you slowly starve to death.</item>
     </string-array>
+
+
+    <string-array name="GOMReputationAndGrade">
+        <item>Everybody on the planet hates you and you got out of school because you suck.</item>
+    </string-array>
+    <string-array name="GOMReputationAndParents">
+        <item>Everybody in the whole world hates you (including your parents) and you decide to kill yourself.</item>
+    </string-array>
+    <string-array name="GOMReputationAndMoney">
+        <item>Everybody on the planet hates and you got no money to get food.</item>
+    </string-array>
+    <string-array name="GOMGradeAndParents">
+        <item>You got kicked out of school and your parents hate you.</item>
+    </string-array>
+    <string-array name="GOMGradeAndMoney">
+        <item>You got kicked out of school and you are broke.</item>
+    </string-array>
+    <string-array name="GOMParentsAndMoney">
+        <item>You disappointed your parents so much that they hated you and kicked out of your home. Now you live on the street. But you also have no money&#8230;</item>
+    </string-array>
+
+
+    <string-array name="GOMReputationAndGradeAndParents">
+        <item>Everybody on the planet hates you, you got kicked of school because you suck and your parents kicked you out of your home.</item>
+    </string-array>
+    <string-array name="GOMReputationAndGradeAndMoney">
+        <item>Everybody on the planet hates you, you got kicked of school because you suck and you have no money anymore.</item>
+    </string-array>
+    <string-array name="GOMReputationAndParentsAndMoney">
+        <item>Everybody on the planet hates you, your parents kicked you out of your home and you are broke, but at least you have a good grade.</item>
+    </string-array>
+    <string-array name="GOMGradeAndParentsAndMoney">
+        <item>You got kicked out of your school and your home. And because you wasted you money so much, you are broke.</item>
+    </string-array>
+
+    <string-array name="GOMReputationAndGradeAndParentsAndMoney">
+        <item>You successfully failed in your life.</item>
+    </string-array>
 </resources>
