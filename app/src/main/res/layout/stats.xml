@@ -14,7 +14,7 @@
         app:layout_constraintEnd_toStartOf="@+id/spaceLeftStats"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/grade_1" />
+        app:srcCompat="@drawable/grade_5" />
 
     <ImageView
         android:id="@+id/imgReputation"
@@ -37,7 +37,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imgParents"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/money_9" />
+        app:srcCompat="@drawable/money_2" />
 
     <ImageView
         android:id="@+id/imgParents"

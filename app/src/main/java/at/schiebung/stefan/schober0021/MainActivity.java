@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity
     private void money()
     {
         ImageView imgMoney = findViewById(R.id.imgMoney);
-        int       money    = R.drawable.fail;
+        int       money    = R.drawable.money_0;
 
         if (Vars.money >= 900)
         {
@@ -171,17 +171,13 @@ public class MainActivity extends AppCompatActivity
         {
             money = R.drawable.money_3;
         }
-        else if (Vars.money >= 200)
+        else if (Vars.money >= 150)
         {
             money = R.drawable.money_2;
         }
-        else if (Vars.money >= 100)
-        {
-            money = R.drawable.money_1;
-        }
         else if (Vars.money >= 0)
         {
-            money = R.drawable.money_0;
+            money = R.drawable.money_1;
         }
 
         imgMoney.setImageResource(money);
@@ -193,15 +189,15 @@ public class MainActivity extends AppCompatActivity
     private void grade()
     {
         ImageView imgGrade = findViewById(R.id.imgGrade);
-        int       grade    = R.drawable.fail;
+        int       grade    = R.drawable.grade_0;
 
         if (Vars.grade >= 800)
         {
-            grade = R.drawable.grade_1;
+            grade = R.drawable.grade_5;
         }
         else if (Vars.grade >= 600)
         {
-            grade = R.drawable.grade_2;
+            grade = R.drawable.grade_4;
         }
         else if (Vars.grade >= 400)
         {
@@ -209,11 +205,11 @@ public class MainActivity extends AppCompatActivity
         }
         else if (Vars.grade >= 200)
         {
-            grade = R.drawable.grade_4;
+            grade = R.drawable.grade_2;
         }
         else if (Vars.grade >= 0)
         {
-            grade = R.drawable.grade_5;
+            grade = R.drawable.grade_1;
         }
 
         imgGrade.setImageResource(grade);
@@ -225,35 +221,31 @@ public class MainActivity extends AppCompatActivity
     private void reputation()
     {
         ImageView imgGrade   = findViewById(R.id.imgReputation);
-        int       reputation = R.drawable.fail;
+        int       reputation = R.drawable.reputation_0;
 
-        if (Vars.reputation >= 850)
+        if (Vars.reputation >= 800)
         {
             reputation = R.drawable.reputation_6;
         }
-        else if (Vars.reputation >= 700)
+        else if (Vars.reputation >= 600)
         {
             reputation = R.drawable.reputation_5;
         }
-        else if (Vars.reputation >= 550)
+        else if (Vars.reputation >= 450)
         {
             reputation = R.drawable.reputation_4;
         }
-        else if (Vars.reputation >= 400)
+        else if (Vars.reputation >= 300)
         {
             reputation = R.drawable.reputation_3;
         }
-        else if (Vars.reputation >= 250)
+        else if (Vars.reputation >= 150)
         {
             reputation = R.drawable.reputation_2;
         }
-        else if (Vars.reputation >= 100)
-        {
-            reputation = R.drawable.reputation_1;
-        }
         else if (Vars.reputation >= 0)
         {
-            reputation = R.drawable.reputation_0;
+            reputation = R.drawable.reputation_1;
         }
 
         imgGrade.setImageResource(reputation);
@@ -265,24 +257,20 @@ public class MainActivity extends AppCompatActivity
     private void parents()
     {
         ImageView imgMoney = findViewById(R.id.imgParents);
-        int       parents  = R.drawable.fail;
+        int       parents  = R.drawable.parents_0;
 
 
-        if (Vars.parents >= 750)
+        if (Vars.parents >= 700)
         {
             parents = R.drawable.parents_3;
         }
-        else if (Vars.parents >= 500)
+        else if (Vars.parents >= 350)
         {
             parents = R.drawable.parents_2;
         }
-        else if (Vars.parents >= 250)
-        {
-            parents = R.drawable.parents_1;
-        }
         else if (Vars.parents >= 0)
         {
-            parents = R.drawable.parents_0;
+            parents = R.drawable.parents_1;
         }
 
         imgMoney.setImageResource(parents);
