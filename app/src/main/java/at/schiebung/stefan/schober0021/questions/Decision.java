@@ -3,10 +3,12 @@ package at.schiebung.stefan.schober0021.questions;
 public class Decision
 {
     //Beliebtheit - Note - Eltern - Geld
-    private int reputation = 0;
-    private int grade      = 0;
-    private int parents    = 0;
-    private int money      = 0;
+    private int     reputation = 0;
+    private int     grade      = 0;
+    private int     parents    = 0;
+    private int     money      = 0;
+    private boolean suicide    = false;
+
 
     public int getReputation()
     {
@@ -39,5 +41,13 @@ public class Decision
     public void setMoney(int money)
     {
         this.money = money;
+    }
+    public boolean isSuicide()
+    {
+        return suicide;
+    }
+    public void setSuicide(boolean suicide)
+    {
+        this.suicide = suicide;
     }
 }

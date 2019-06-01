@@ -14,8 +14,6 @@ class Vars
     private static final int defaultFailedParents    = 0;
     private static final int defaultFailedMoney      = 0;
 
-
-    static int     lastQuestion = 0;
     static int     reputation;
     static int     grade;
     static int     parents;

@@ -14,6 +14,7 @@ import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity
 {
+    private       boolean   gameOver  = false;
     private final Questions questions = new Questions();
 
     @Override
@@ -89,7 +90,6 @@ public class MainActivity extends AppCompatActivity
         switchButtons();
         doNextStep();
     }
-
     /**
      * Decides if the game show go on, or if a game over screen should be shown.
      */
@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity
 
         if (!gameOver())
         {
+            gameOver = false;
             showNewQuestion();
         }
         else
@@ -114,10 +115,12 @@ public class MainActivity extends AppCompatActivity
      */
     private void evaluate(int choice)
     {
-        Vars.reputation += questions.questionDecisionArray.questionDecision[Vars.lastQuestion].getDecisionArray()[choice].getReputation();
-        Vars.grade += questions.questionDecisionArray.questionDecision[Vars.lastQuestion].getDecisionArray()[choice].getGrade();
-        Vars.parents += questions.questionDecisionArray.questionDecision[Vars.lastQuestion].getDecisionArray()[choice].getParents();
-        Vars.money += questions.questionDecisionArray.questionDecision[Vars.lastQuestion].getDecisionArray()[choice].getMoney();
+        questions.currentDecision = choice;
+
+        Vars.reputation += questions.getCurrentDecision().getReputation();
+        Vars.grade += questions.getCurrentDecision().getGrade();
+        Vars.parents += questions.getCurrentDecision().getParents();
+        Vars.money += questions.getCurrentDecision().getMoney();
 
         showAnswer(choice);
         refreshIcons();
@@ -289,28 +292,28 @@ public class MainActivity extends AppCompatActivity
         do
         {
             pickedQuestion = rng.nextInt(question.length);
-        } while (Vars.lastQuestion == pickedQuestion);
+        } while (questions.currentQuestion == pickedQuestion);
 
-        Vars.lastQuestion = pickedQuestion;
+        questions.currentQuestion = pickedQuestion;
 
         TextView txtQuestion = findViewById(R.id.txtQuestion);
-        txtQuestion.setText(question[Vars.lastQuestion]);
+        txtQuestion.setText(question[questions.currentQuestion]);
 
         String[] choice1    = res.getStringArray(R.array.choice1);
         TextView btnChoice1 = findViewById(R.id.btnChoice1);
-        btnChoice1.setText(choice1[Vars.lastQuestion]);
+        btnChoice1.setText(choice1[questions.currentQuestion]);
 
         String[] choice2    = res.getStringArray(R.array.choice2);
         TextView btnChoice2 = findViewById(R.id.btnChoice2);
-        btnChoice2.setText(choice2[Vars.lastQuestion]);
+        btnChoice2.setText(choice2[questions.currentQuestion]);
 
         String[] choice3    = res.getStringArray(R.array.choice3);
         TextView btnChoice3 = findViewById(R.id.btnChoice3);
-        btnChoice3.setText(choice3[Vars.lastQuestion]);
+        btnChoice3.setText(choice3[questions.currentQuestion]);
 
         String[] choice4    = res.getStringArray(R.array.choice4);
         TextView btnChoice4 = findViewById(R.id.btnChoice4);
-        btnChoice4.setText(choice4[Vars.lastQuestion]);
+        btnChoice4.setText(choice4[questions.currentQuestion]);
     }
 
     /**
@@ -320,7 +323,7 @@ public class MainActivity extends AppCompatActivity
      */
     private boolean gameOver()
     {
-        return Vars.reputation < 0 || Vars.grade < 0 || Vars.parents < 0 || Vars.money < 0;
+        return !gameOver && (Vars.reputation < 0 || Vars.grade < 0 || Vars.parents < 0 || Vars.money < 0 || questions.getCurrentDecision().isSuicide());
     }
 
     /**
@@ -328,6 +331,7 @@ public class MainActivity extends AppCompatActivity
      */
     private void showGameOverScreen(boolean gom)
     {
+        gameOver = true;
         ConstraintLayout clGOM     = findViewById(R.id.includeGameOverScreen);
         ConstraintLayout clChoices = findViewById(R.id.includeChoices);
         switchConstraintLayouts(gom, clGOM, clChoices);
@@ -343,72 +347,90 @@ public class MainActivity extends AppCompatActivity
         Random    rng             = new Random();
         String[]  gameOverMessage = res.getStringArray(R.array.standardGOM);
         ImageView gop             = findViewById(R.id.imgGOP);
+        int       picture         = R.drawable.gop_grade;
 
         if (Vars.reputation < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMReputation);
-            gop.setImageResource(R.drawable.gop_suicide);
+            picture = R.drawable.gop_suicide;
         }
         if (Vars.grade < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMGrade);
-            gop.setImageResource(R.drawable.gop_grade);
+            picture = R.drawable.gop_grade;
         }
         if (Vars.parents < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMParents);
-            gop.setImageResource(R.drawable.gop_parents);
+            picture = R.drawable.gop_parents;
         }
         if (Vars.money < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMMoney);
-            gop.setImageResource(R.drawable.gop_money);
+            picture = R.drawable.gop_money;
         }
         if (Vars.reputation < 0 && Vars.grade < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMReputationAndGrade);
+            picture = R.drawable.gop_grade;
         }
         if (Vars.reputation < 0 && Vars.parents < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMReputationAndParents);
+            picture = R.drawable.gop_grade;
         }
         if (Vars.reputation < 0 && Vars.money < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMReputationAndMoney);
+            picture = R.drawable.gop_money;
         }
         if (Vars.grade < 0 && Vars.parents < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMGradeAndParents);
+            picture = R.drawable.gop_grade;
         }
         if (Vars.grade < 0 && Vars.money < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMGradeAndMoney);
+            picture = R.drawable.gop_grade;
         }
         if (Vars.parents < 0 && Vars.money < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMParentsAndMoney);
+            picture = R.drawable.gop_parents;
         }
         if (Vars.reputation < 0 && Vars.grade < 0 && Vars.parents < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMReputationAndGradeAndParents);
+            picture = R.drawable.gop_grade;
         }
         if (Vars.reputation < 0 && Vars.grade < 0 && Vars.money < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMReputationAndGradeAndMoney);
+            picture = R.drawable.gop_grade;
         }
         if (Vars.reputation < 0 && Vars.parents < 0 && Vars.money < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMReputationAndParentsAndMoney);
+            picture = R.drawable.gop_parents;
         }
         if (Vars.grade < 0 && Vars.parents < 0 && Vars.money < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMGradeAndParentsAndMoney);
+            picture = R.drawable.gop_parents;
         }
         if (Vars.reputation < 0 && Vars.grade < 0 && Vars.parents < 0 && Vars.money < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMReputationAndGradeAndParentsAndMoney);
+            picture = R.drawable.gop_suicide;
+        }
+        if (questions.getCurrentDecision().isSuicide())
+        {
+            gameOverMessage = res.getStringArray(R.array.GOMsuiced);
+            picture = R.drawable.gop_suicide;
         }
 
+        gop.setImageResource(picture);
 
         int pickedGOM = rng.nextInt(gameOverMessage.length);
 
@@ -447,7 +469,7 @@ public class MainActivity extends AppCompatActivity
 
         try
         {
-            if (answer[Vars.lastQuestion].equals(""))
+            if (answer[questions.currentQuestion].equals(""))
             {
                 defaultAnswer = true;
             }
@@ -467,7 +489,7 @@ public class MainActivity extends AppCompatActivity
         }
         else
         {
-            output = answer[Vars.lastQuestion];
+            output = answer[questions.currentQuestion];
         }
 
 

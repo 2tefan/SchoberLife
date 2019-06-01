@@ -1,9 +1,11 @@
 package at.schiebung.stefan.schober0021;
 
+import at.schiebung.stefan.schober0021.questions.Decision;
 import at.schiebung.stefan.schober0021.questions.QuestionDecisionArray;
 
 class Questions
 {
+    private final QuestionDecisionArray questionDecisionArray = new QuestionDecisionArray();
     //Beliebtheit - Note - Eltern - Geld
     //private final int[][] question   = {{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}};
 
@@ -26,8 +28,13 @@ class Questions
     //
     //    final int[][][] questionDecisionArray.questionArrayMainValues = {question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11, question12, question13,
     //            question14, question15, question16};
+    int currentQuestion;
+    int currentDecision;
 
-    final QuestionDecisionArray questionDecisionArray = new QuestionDecisionArray();
+    Decision getCurrentDecision()
+    {
+        return questionDecisionArray.questionDecision[currentQuestion].getDecisionArray()[currentDecision];
+    }
 
     void init(int countQuestions)
     {
@@ -75,6 +82,7 @@ class Questions
         questionDecisionArray.questionDecision[2].getDecision3().setGrade(-10000);
         questionDecisionArray.questionDecision[2].getDecision3().setParents(-10000);
         questionDecisionArray.questionDecision[2].getDecision3().setMoney(-10000);
+        questionDecisionArray.questionDecision[2].getDecision3().setSuicide(true);
 
         //----------------------------------------------------------------------------
 

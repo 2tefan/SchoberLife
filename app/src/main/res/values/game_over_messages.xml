@@ -53,4 +53,8 @@
     <string-array name="GOMReputationAndGradeAndParentsAndMoney">
         <item>You successfully failed in your life.</item>
     </string-array>
+
+    <string-array name="GOMsuiced">
+        <item>You killed yourself and now this game has no reason to go on.</item>
+    </string-array>
 </resources>
