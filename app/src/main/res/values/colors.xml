@@ -12,4 +12,7 @@
 	<!--Background-->
 	<color name="background1">#4FC3F7</color>
 	<color name="background2">#4DD0E1</color>
+
+	<color name="welcome_screen_bg_color1">#D064B5F6</color>
+	<color name="welcome_screen_bg_color2">#D0294F69</color>
 </resources>

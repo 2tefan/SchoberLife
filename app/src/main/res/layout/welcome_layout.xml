@@ -14,6 +14,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/quicksand_light"
         android:text="@string/welcomeIconDesc"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,48 +33,60 @@
             android:id="@+id/txtWelcomeGrade"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="4dp"
+            android:fontFamily="@font/quicksand_light"
             android:text="@string/welcomeGrade"
             android:textAlignment="center"
             app:layout_constraintEnd_toStartOf="@+id/spaceLeftWelcome"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/imgArrowGrade" />
 
         <TextView
             android:id="@+id/txtWelcomeMoney"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:fontFamily="@font/quicksand_light"
             android:text="@string/welcomeMoney"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/spaceRightWelcome"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <TextView
             android:id="@+id/txtWelcomeParents"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:fontFamily="@font/quicksand_light"
             android:text="@string/welcomeParents"
             android:textAlignment="center"
             app:layout_constraintEnd_toStartOf="@+id/spaceRightWelcome"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/spaceMiddleWelcome"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
         <TextView
             android:id="@+id/txtWelcomeReputaion"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:fontFamily="@font/quicksand_light"
             android:text="@string/welcomeReputation"
             android:textAlignment="center"
             app:layout_constraintEnd_toStartOf="@+id/spaceMiddleWelcome"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/spaceLeftWelcome"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/imgArrowReputation" />
 
         <Space
             android:id="@+id/spaceLeftWelcome"
@@ -103,13 +116,60 @@
             app:layout_constraintStart_toEndOf="@+id/spaceMiddleWelcome"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/imgArrowReputation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/CDarrow"
+            app:layout_constraintEnd_toEndOf="@+id/txtWelcomeReputaion"
+            app:layout_constraintStart_toStartOf="@+id/txtWelcomeReputaion"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_expand_less_black_24dp" />
+
+        <ImageView
+            android:id="@+id/imgArrowGrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/CDarrow"
+            app:layout_constraintEnd_toEndOf="@+id/txtWelcomeGrade"
+            app:layout_constraintStart_toStartOf="@+id/txtWelcomeGrade"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_expand_less_black_24dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/CDarrow"
+            app:layout_constraintEnd_toEndOf="@+id/txtWelcomeParents"
+            app:layout_constraintStart_toStartOf="@+id/txtWelcomeParents"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_expand_less_black_24dp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/CDarrow"
+            app:layout_constraintEnd_toEndOf="@+id/txtWelcomeMoney"
+            app:layout_constraintStart_toStartOf="@+id/txtWelcomeMoney"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_expand_less_black_24dp" />
+
     </android.support.constraint.ConstraintLayout>
 
     <TextView
         android:id="@+id/txtWelcomeMessage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_light"
+        android:lineSpacingExtra="10sp"
         android:text="@string/welcomeMessage"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

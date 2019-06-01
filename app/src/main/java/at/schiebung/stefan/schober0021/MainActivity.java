@@ -342,22 +342,27 @@ public class MainActivity extends AppCompatActivity
         Resources res             = getResources();
         Random    rng             = new Random();
         String[]  gameOverMessage = res.getStringArray(R.array.standardGOM);
+        ImageView gop             = findViewById(R.id.imgGOP);
 
         if (Vars.reputation < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMReputation);
+            gop.setImageResource(R.drawable.gop_reputation);
         }
         if (Vars.grade < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMGrade);
+            gop.setImageResource(R.drawable.gop_grade);
         }
         if (Vars.parents < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMParents);
+            gop.setImageResource(R.drawable.gop_parents);
         }
         if (Vars.money < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMMoney);
+            gop.setImageResource(R.drawable.gop_money);
         }
         if (Vars.reputation < 0 && Vars.grade < 0)
         {
@@ -509,8 +514,18 @@ public class MainActivity extends AppCompatActivity
     {
         ConstraintLayout clWelcome = findViewById(R.id.includeWelcomeLayout);
         ConstraintLayout clChoices = findViewById(R.id.includeChoices);
+        ConstraintLayout mainCL    = findViewById(R.id.mainCL);
 
         switchConstraintLayouts(welcomeMessage, clWelcome, clChoices);
+
+        if (welcomeMessage)
+        {
+            mainCL.setBackground(getResources().getDrawable(R.drawable.welcome_screen_bg));
+        }
+        else
+        {
+            mainCL.setBackground(getResources().getDrawable(R.drawable.background));
+        }
     }
 
     /**
