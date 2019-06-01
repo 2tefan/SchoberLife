@@ -347,7 +347,7 @@ public class MainActivity extends AppCompatActivity
         if (Vars.reputation < 0)
         {
             gameOverMessage = res.getStringArray(R.array.GOMReputation);
-            gop.setImageResource(R.drawable.gop_reputation);
+            gop.setImageResource(R.drawable.gop_suicide);
         }
         if (Vars.grade < 0)
         {
