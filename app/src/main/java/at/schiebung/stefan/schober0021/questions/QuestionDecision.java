@@ -2,7 +2,8 @@ package at.schiebung.stefan.schober0021.questions;
 
 public class QuestionDecision
 {
-    private final Decision[] decisionArray = new Decision[4];
+    private final Decision[] decisionArray   = new Decision[4];
+    private       boolean    specialQuestion = false;
 
     void init()
     {
@@ -31,5 +32,13 @@ public class QuestionDecision
     public Decision[] getDecisionArray()
     {
         return decisionArray;
+    }
+    public boolean isSpecialQuestion()
+    {
+        return specialQuestion;
+    }
+    public void setSpecialQuestion(boolean specialQuestion)
+    {
+        this.specialQuestion = specialQuestion;
     }
 }

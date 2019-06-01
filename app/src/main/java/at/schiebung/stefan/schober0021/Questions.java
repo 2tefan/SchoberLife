@@ -1,6 +1,7 @@
 package at.schiebung.stefan.schober0021;
 
 import at.schiebung.stefan.schober0021.questions.Decision;
+import at.schiebung.stefan.schober0021.questions.QuestionDecision;
 import at.schiebung.stefan.schober0021.questions.QuestionDecisionArray;
 
 class Questions
@@ -34,6 +35,10 @@ class Questions
     Decision getCurrentDecision()
     {
         return questionDecisionArray.questionDecision[currentQuestion].getDecisionArray()[currentDecision];
+    }
+    QuestionDecision getQuestion(int questionID)
+    {
+        return questionDecisionArray.questionDecision[questionID];
     }
 
     void init(int countQuestions)
@@ -246,6 +251,29 @@ class Questions
 
         questionDecisionArray.questionDecision[15].getDecision3().setReputation(-25);
 
+        //----------------------------------------------------------------------------
 
+        questionDecisionArray.questionDecision[16].getDecision0().setReputation(-50);
+
+        questionDecisionArray.questionDecision[16].getDecision1().setReputation(-100);
+
+        questionDecisionArray.questionDecision[16].getDecision2().setReputation(20);
+        questionDecisionArray.questionDecision[16].getDecision2().setMoney(-300);
+
+        questionDecisionArray.questionDecision[16].getDecision3().setReputation(-20);
+        questionDecisionArray.questionDecision[16].getDecision3().setNextQuestion(17);
+
+        //----------------------------------------------------------------------------
+
+        questionDecisionArray.questionDecision[17].setSpecialQuestion(true);
+        questionDecisionArray.questionDecision[17].getDecision0().setReputation(questionDecisionArray.questionDecision[16].getDecision2().getReputation());
+        questionDecisionArray.questionDecision[17].getDecision0().setMoney(questionDecisionArray.questionDecision[16].getDecision2().getMoney());
+
+        questionDecisionArray.questionDecision[17].getDecision1().setReputation(questionDecisionArray.questionDecision[16].getDecision1().getReputation());
+
+        questionDecisionArray.questionDecision[17].getDecision2().setReputation(-100);
+        questionDecisionArray.questionDecision[17].getDecision2().setNextQuestion(17);
+
+        questionDecisionArray.questionDecision[17].getDecision3().setReputation(questionDecisionArray.questionDecision[16].getDecision0().getReputation());
     }
 }

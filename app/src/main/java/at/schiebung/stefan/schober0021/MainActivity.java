@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import java.util.Random;
 
+import at.schiebung.stefan.schober0021.questions.Decision;
 import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity
@@ -285,19 +286,18 @@ public class MainActivity extends AppCompatActivity
     private void showNewQuestion()
     {
         Resources res = getResources();
-        Random    rng = new Random();
 
-        String[] question = res.getStringArray(R.array.question);
-        int      pickedQuestion;
-        do
+        if (questions.getCurrentDecision().getNextQuestion() == Decision.NO_NEXT_QUESTION)
         {
-            pickedQuestion = rng.nextInt(question.length);
-        } while (questions.currentQuestion == pickedQuestion);
-
-        questions.currentQuestion = pickedQuestion;
+            getNewQuestion();
+        }
+        else
+        {
+            questions.currentQuestion = questions.getCurrentDecision().getNextQuestion();
+        }
 
         TextView txtQuestion = findViewById(R.id.txtQuestion);
-        txtQuestion.setText(question[questions.currentQuestion]);
+        txtQuestion.setText(getResources().getStringArray(R.array.question)[questions.currentQuestion]);
 
         String[] choice1    = res.getStringArray(R.array.choice1);
         TextView btnChoice1 = findViewById(R.id.btnChoice1);
@@ -314,6 +314,20 @@ public class MainActivity extends AppCompatActivity
         String[] choice4    = res.getStringArray(R.array.choice4);
         TextView btnChoice4 = findViewById(R.id.btnChoice4);
         btnChoice4.setText(choice4[questions.currentQuestion]);
+    }
+
+    private void getNewQuestion()
+    {
+        String[] question = getResources().getStringArray(R.array.question);
+        Random   rng      = new Random();
+
+        int pickedQuestion;
+        do
+        {
+            pickedQuestion = rng.nextInt(question.length);
+        } while (questions.currentQuestion == pickedQuestion && questions.getQuestion(pickedQuestion).isSpecialQuestion());
+
+        questions.currentQuestion = pickedQuestion;
     }
 
     /**

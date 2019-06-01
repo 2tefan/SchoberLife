@@ -2,12 +2,14 @@ package at.schiebung.stefan.schober0021.questions;
 
 public class Decision
 {
+    public static final int     NO_NEXT_QUESTION = -1;
     //Beliebtheit - Note - Eltern - Geld
-    private int     reputation = 0;
-    private int     grade      = 0;
-    private int     parents    = 0;
-    private int     money      = 0;
-    private boolean suicide    = false;
+    private             int     reputation       = 0;
+    private             int     grade            = 0;
+    private             int     parents          = 0;
+    private             int     money            = 0;
+    private             boolean suicide          = false;
+    private             int     nextQuestion     = NO_NEXT_QUESTION;
 
 
     public int getReputation()
@@ -49,5 +51,13 @@ public class Decision
     public void setSuicide(boolean suicide)
     {
         this.suicide = suicide;
+    }
+    public int getNextQuestion()
+    {
+        return nextQuestion;
+    }
+    public void setNextQuestion(int nextQuestion)
+    {
+        this.nextQuestion = nextQuestion;
     }
 }
