@@ -275,5 +275,16 @@ class Questions
         questionDecisionArray.questionDecision[17].getDecision2().setNextQuestion(17);
 
         questionDecisionArray.questionDecision[17].getDecision3().setReputation(questionDecisionArray.questionDecision[16].getDecision0().getReputation());
+
+        //----------------------------------------------------------------------------
+
+        questionDecisionArray.questionDecision[18].getDecision0().setReputation(-10);
+
+        questionDecisionArray.questionDecision[18].getDecision1().setReputation(-10);
+        questionDecisionArray.questionDecision[18].getDecision1().setGrade(50);
+
+        questionDecisionArray.questionDecision[18].getDecision2().setReputation(50);
+
+        questionDecisionArray.questionDecision[18].getDecision3().setReputation(-10);
     }
 }
