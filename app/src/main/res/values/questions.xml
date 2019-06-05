@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string-array name="question">
         <item>You haven\'t done your homework. What are you going to do?</item>
         <item>Your teacher entered the room, and suddenly the class was quiet. \"Please close your books. Today we\'re writing a test.\" You haven\'t learned anything. What will you do now?</item>
@@ -20,5 +20,6 @@
         <item>You were invited to play paintball with your friends.</item>
         <item>Your friends asked you again, if you want to play paintball with them.</item>
         <item>You are bored and at home.</item>
+        <item tools:ignore="Typos">It is very very hot in your classroom, what are you going to do?</item>
     </string-array>
 </resources>

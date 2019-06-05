@@ -1,8 +1,8 @@
-package at.schiebung.stefan.schober0021;
+package at.schiebung.stefan.schoberLive;
 
-import at.schiebung.stefan.schober0021.questions.Decision;
-import at.schiebung.stefan.schober0021.questions.QuestionDecision;
-import at.schiebung.stefan.schober0021.questions.QuestionDecisionArray;
+import at.schiebung.stefan.schoberLive.questions.Decision;
+import at.schiebung.stefan.schoberLive.questions.QuestionDecision;
+import at.schiebung.stefan.schoberLive.questions.QuestionDecisionArray;
 
 class Questions
 {
@@ -286,5 +286,16 @@ class Questions
         questionDecisionArray.questionDecision[18].getDecision2().setReputation(50);
 
         questionDecisionArray.questionDecision[18].getDecision3().setReputation(-10);
+
+        //----------------------------------------------------------------------------
+
+        questionDecisionArray.questionDecision[19].getDecision0().setGrade(-50);
+
+        questionDecisionArray.questionDecision[19].getDecision1().setGrade(-50);
+
+        questionDecisionArray.questionDecision[19].getDecision2().setGrade(-60);
+
+        questionDecisionArray.questionDecision[19].getDecision3().setGrade(-70);
+        questionDecisionArray.questionDecision[19].getDecision3().setReputation(20);
     }
 }

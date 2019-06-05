@@ -1,4 +1,4 @@
-package at.schiebung.stefan.schober0021;
+package at.schiebung.stefan.schoberLive;
 
 import android.content.Context;
 import android.content.SharedPreferences;

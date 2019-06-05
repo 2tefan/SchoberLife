@@ -1,4 +1,4 @@
-package at.schiebung.stefan.schober0021;
+package at.schiebung.stefan.schoberLive;
 
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-import at.schiebung.stefan.schober0021.questions.Decision;
+import at.schiebung.stefan.schoberLive.questions.Decision;
 import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity
