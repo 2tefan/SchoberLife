@@ -1,4 +1,4 @@
-# Schober0021
+# SchoberLife
 
 This is a little game and you have four values that can go up and down and if they hit a value that is too low you lose :(.
 This values are called: Reputation - Money - Parents - Grade
