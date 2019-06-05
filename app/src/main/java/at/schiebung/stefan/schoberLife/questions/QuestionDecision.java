@@ -1,4 +1,4 @@
-package at.schiebung.stefan.schoberLive.questions;
+package at.schiebung.stefan.schoberLife.questions;
 
 public class QuestionDecision
 {

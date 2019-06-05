@@ -1,4 +1,4 @@
-package at.schiebung.stefan.schoberLive;
+package at.schiebung.stefan.schoberLife;
 
 class Vars
 {

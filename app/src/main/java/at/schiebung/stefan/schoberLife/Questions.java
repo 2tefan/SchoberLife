@@ -1,8 +1,8 @@
-package at.schiebung.stefan.schoberLive;
+package at.schiebung.stefan.schoberLife;
 
-import at.schiebung.stefan.schoberLive.questions.Decision;
-import at.schiebung.stefan.schoberLive.questions.QuestionDecision;
-import at.schiebung.stefan.schoberLive.questions.QuestionDecisionArray;
+import at.schiebung.stefan.schoberLife.questions.Decision;
+import at.schiebung.stefan.schoberLife.questions.QuestionDecision;
+import at.schiebung.stefan.schoberLife.questions.QuestionDecisionArray;
 
 class Questions
 {
