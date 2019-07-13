@@ -1,16 +1,12 @@
 package com.schober.schoberLife.questions;
 
-public class QuestionDecisionArray
-{
+public class QuestionDecisionArray {
     public QuestionDecision[] questionDecision = new QuestionDecision[0];
 
-    public void init(int countQuestions)
-    {
+    public QuestionDecisionArray(int countQuestions) {
         questionDecision = new QuestionDecision[countQuestions];
-        for (int i = 0; i < questionDecision.length; i++)
-        {
+        for (int i = 0; i < questionDecision.length; i++) {
             questionDecision[i] = new QuestionDecision();
-            questionDecision[i].init();
         }
     }
 }

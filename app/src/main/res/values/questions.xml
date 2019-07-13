@@ -21,5 +21,6 @@
         <item>Your friends asked you again, if you want to play paintball with them.</item>
         <item>You are bored and at home.</item>
         <item tools:ignore="Typos">It is very very hot in your classroom, what are you going to do?</item>
+        <item>Your friends are talking about the summer holidays and now you think about them. What are you going to do in your summer holidays?</item>
     </string-array>
 </resources>

@@ -2,8 +2,8 @@ package com.schober.schoberLife;
 
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity
             Timber.plant(new Timber.DebugTree());
         }
 
-        questions.init(getResources().getStringArray(R.array.question).length);
+        questions.importQuestionsFromCSV(this);
+
         Saves.loadSaves(this);
 
         showGameOverScreen(false);
