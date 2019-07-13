@@ -2,11 +2,12 @@ package com.schober.schoberLife;
 
 import android.content.res.Resources;
 import android.os.Bundle;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.schober.schoberLife.questions.Decision;
 
@@ -327,7 +328,8 @@ public class MainActivity extends AppCompatActivity
         do
         {
             pickedQuestion = rng.nextInt(question.length);
-        } while (questions.currentQuestion == pickedQuestion && questions.getQuestion(pickedQuestion).isSpecialQuestion());
+            Timber.e("effeaefea");
+        } while (questions.currentQuestion == pickedQuestion || questions.getQuestion(pickedQuestion).isSpecialQuestion());
 
         questions.currentQuestion = pickedQuestion;
     }

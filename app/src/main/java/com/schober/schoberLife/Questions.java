@@ -10,7 +10,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 
 import timber.log.Timber;
 
@@ -31,14 +30,14 @@ class Questions {
     }
 
 
-    public void importQuestionsFromCSV(Context context) {
+    void importQuestionsFromCSV(Context context) {
         questionDecisionArray = new QuestionDecisionArray(context.getResources().getStringArray(R.array.question).length);
 
         InputStream inputStream = context.getResources().openRawResource(R.raw.questions_values);
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
         try {
-            String csvLine = reader.readLine(); // Skip first Line
+            @SuppressWarnings("UnusedAssignment") String csvLine = reader.readLine(); // Skip first Line
 
             while ((csvLine = reader.readLine()) != null) {
                 String[] row = csvLine.split(",");
@@ -85,12 +84,11 @@ class Questions {
             }
         } catch (IOException ex) {
             throw new RuntimeException("Error in reading CSV file: " + ex);
-        } finally {
-            try {
-                inputStream.close();
-            } catch (IOException e) {
-                throw new RuntimeException("Error while closing input stream: " + e);
-            }
+        }
+        try {
+            inputStream.close();
+        } catch (IOException e) {
+            throw new RuntimeException("Error while closing input stream: " + e);
         }
     }
 }
