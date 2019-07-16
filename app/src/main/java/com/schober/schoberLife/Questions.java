@@ -22,7 +22,7 @@ class Questions {
     int currentDecision;
 
     Decision getCurrentDecision() {
-        return questionDecisionArray.questionDecision[currentQuestion].getDecisionArray()[currentDecision];
+        return questionDecisionArray.questionDecision[currentQuestion].decisionArray[currentDecision];
     }
 
     QuestionDecision getQuestion(int questionID) {
@@ -31,7 +31,7 @@ class Questions {
 
 
     void importQuestionsFromCSV(Context context) {
-        questionDecisionArray = new QuestionDecisionArray(context.getResources().getStringArray(R.array.question).length);
+        questionDecisionArray = new QuestionDecisionArray();
 
         InputStream inputStream = context.getResources().openRawResource(R.raw.questions_values);
 
@@ -40,6 +40,7 @@ class Questions {
             @SuppressWarnings("UnusedAssignment") String csvLine = reader.readLine(); // Skip first Line
 
             while ((csvLine = reader.readLine()) != null) {
+                questionDecisionArray.addQuestionDecision();
                 String[] row = csvLine.split(",");
 
                 try {

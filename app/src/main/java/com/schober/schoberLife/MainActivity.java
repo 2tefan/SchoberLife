@@ -328,7 +328,6 @@ public class MainActivity extends AppCompatActivity
         do
         {
             pickedQuestion = rng.nextInt(question.length);
-            Timber.e("effeaefea");
         } while (questions.currentQuestion == pickedQuestion || questions.getQuestion(pickedQuestion).isSpecialQuestion());
 
         questions.currentQuestion = pickedQuestion;

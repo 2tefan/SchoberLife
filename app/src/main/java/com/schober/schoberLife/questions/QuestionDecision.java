@@ -5,14 +5,9 @@ public class QuestionDecision {
     private boolean specialQuestion = false;
 
     QuestionDecision() {
-
         for (int i = 0; i < decisionArray.length; i++) {
             decisionArray[i] = new Decision();
         }
-    }
-
-    public Decision[] getDecisionArray() {
-        return decisionArray;
     }
 
     public boolean isSpecialQuestion() {
