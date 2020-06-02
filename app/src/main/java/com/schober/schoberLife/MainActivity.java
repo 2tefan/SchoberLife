@@ -15,6 +15,7 @@ import java.util.Random;
 
 import timber.log.Timber;
 
+@SuppressWarnings("unused")
 public class MainActivity extends AppCompatActivity
 {
     private       boolean   gameOver  = false;
